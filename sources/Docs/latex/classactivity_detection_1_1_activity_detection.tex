@@ -1,0 +1,226 @@
+\hypertarget{classactivity_detection_1_1_activity_detection}{\subsection{activity\-Detection.\-Activity\-Detection Class Reference}
+\label{classactivity_detection_1_1_activity_detection}\index{activity\-Detection.\-Activity\-Detection@{activity\-Detection.\-Activity\-Detection}}
+}
+
+
+Estimates the energy consumption (Kcal) by second.  
+
+
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classactivity_detection_1_1_activity_detection_a928cf245f832e26577625232d0803a47}{\-\_\-\-\_\-init\-\_\-\-\_\-}
+\begin{DoxyCompactList}\small\item\em Constructor for Activity Detection. \end{DoxyCompactList}\item 
+def \hyperlink{classactivity_detection_1_1_activity_detection_a65ceffc34852f2debf600096301d6217}{abs\-\_\-list}
+\begin{DoxyCompactList}\small\item\em Take the absolute value of a list. \end{DoxyCompactList}\item 
+def \hyperlink{classactivity_detection_1_1_activity_detection_a25c0d2b32a72ac5be756a5fd74ee0c4c}{update\-Activity}
+\begin{DoxyCompactList}\small\item\em Update activity detection algorithm with last second data. \end{DoxyCompactList}\item 
+def \hyperlink{classactivity_detection_1_1_activity_detection_aaedeb86760c2edb29274956e53240ecc}{get\-Energy\-Consumption}
+\begin{DoxyCompactList}\small\item\em Getter for the last second energy consuption. \end{DoxyCompactList}\item 
+def \hyperlink{classactivity_detection_1_1_activity_detection_a104e51a618c579e321f6a71f1e05cb87}{get\-E\-E}
+\begin{DoxyCompactList}\small\item\em Getter for the E\-E value. \end{DoxyCompactList}\item 
+def \hyperlink{classactivity_detection_1_1_activity_detection_a8dd2cc520a000ca555f8a478e11ffaf7}{get\-B\-M\-R}
+\begin{DoxyCompactList}\small\item\em Getter for the B\-M\-R value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classactivity_detection_1_1_activity_detection_ac059a8775de7bbdd7e4e5d5d5bf8d238}{{\bfseries B\-M\-R}}\label{classactivity_detection_1_1_activity_detection_ac059a8775de7bbdd7e4e5d5d5bf8d238}
+
+\item 
+\hypertarget{classactivity_detection_1_1_activity_detection_a27126ac10d1900ab3eb87f4e0bfc1811}{{\bfseries fs}}\label{classactivity_detection_1_1_activity_detection_a27126ac10d1900ab3eb87f4e0bfc1811}
+
+\item 
+\hypertarget{classactivity_detection_1_1_activity_detection_a08d4f14a05d0a9c66e19463bdaa5c668}{{\bfseries E\-E}}\label{classactivity_detection_1_1_activity_detection_a08d4f14a05d0a9c66e19463bdaa5c668}
+
+\end{DoxyCompactItemize}
+\subsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classactivity_detection_1_1_activity_detection_a7a2350bfa80449984efa3e5ae313a29c}{B\-M\-R} = .\-023842593
+\begin{DoxyCompactList}\small\item\em Default value for B\-M\-R. \end{DoxyCompactList}\item 
+int \hyperlink{classactivity_detection_1_1_activity_detection_a1a2a17f907231e0ea52ab41de3aa54ed}{E\-E} = 0
+\begin{DoxyCompactList}\small\item\em Predicted consumed energy by activity (E\-E) in a second. \end{DoxyCompactList}\item 
+\hypertarget{classactivity_detection_1_1_activity_detection_a9480289ea33b66524afd3fc17c931bc8}{int {\bfseries fs} = .\-02}\label{classactivity_detection_1_1_activity_detection_a9480289ea33b66524afd3fc17c931bc8}
+
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Estimates the energy consumption (Kcal) by second. 
+
+Using an accelerometer and aditional data from the user calculates\-:
+\begin{DoxyItemize}
+\item Index of activity (I\-A\-A) in a second
+\item Predicted consumed energy by activity (E\-E) in a second
+\item Predicted consumed energy by basal metabolism (B\-M\-R) in a second
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Author}
+Dr. Pablo Reyes 
+
+Sebastian Sepulveda 
+\end{DoxyAuthor}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000001}{Todo}]Validate algorithms \end{DoxyRefDesc}
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classactivity_detection_1_1_activity_detection_a928cf245f832e26577625232d0803a47}{\index{activity\-Detection\-::\-Activity\-Detection@{activity\-Detection\-::\-Activity\-Detection}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!activityDetection::ActivityDetection@{activity\-Detection\-::\-Activity\-Detection}}
+\paragraph[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def activity\-Detection.\-Activity\-Detection.\-\_\-\-\_\-init\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{kg = {\ttfamily 70}, }
+\item[{}]{cm = {\ttfamily 170}, }
+\item[{}]{years = {\ttfamily 20}, }
+\item[{}]{fs = {\ttfamily .02}}
+\end{DoxyParamCaption}
+)}}\label{classactivity_detection_1_1_activity_detection_a928cf245f832e26577625232d0803a47}
+
+
+Constructor for Activity Detection. 
+
+Initializes calculations for the user to determinate the B\-M\-R 
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer \\
+\hline
+{\em kg} & Weight of the user, in Kg \\
+\hline
+{\em cm} & Height of the user, in cm \\
+\hline
+{\em years} & Years of the user \\
+\hline
+{\em fs} & Time between samples, in seconds \\
+\hline
+\end{DoxyParams}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classactivity_detection_1_1_activity_detection_a65ceffc34852f2debf600096301d6217}{\index{activity\-Detection\-::\-Activity\-Detection@{activity\-Detection\-::\-Activity\-Detection}!abs\-\_\-list@{abs\-\_\-list}}
+\index{abs\-\_\-list@{abs\-\_\-list}!activityDetection::ActivityDetection@{activity\-Detection\-::\-Activity\-Detection}}
+\paragraph[{abs\-\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}def activity\-Detection.\-Activity\-Detection.\-abs\-\_\-list (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{\-\_\-list}
+\end{DoxyParamCaption}
+)}}\label{classactivity_detection_1_1_activity_detection_a65ceffc34852f2debf600096301d6217}
+
+
+Take the absolute value of a list. 
+
+In Python, the {\ttfamily abs} function can't return the absolute values from a list. This function is a workaround to this limitation. 
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer \\
+\hline
+{\em \-\_\-list} & The original list to take the absolutes values \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The absolute values in the original list 
+\end{DoxyReturn}
+\hypertarget{classactivity_detection_1_1_activity_detection_a8dd2cc520a000ca555f8a478e11ffaf7}{\index{activity\-Detection\-::\-Activity\-Detection@{activity\-Detection\-::\-Activity\-Detection}!get\-B\-M\-R@{get\-B\-M\-R}}
+\index{get\-B\-M\-R@{get\-B\-M\-R}!activityDetection::ActivityDetection@{activity\-Detection\-::\-Activity\-Detection}}
+\paragraph[{get\-B\-M\-R}]{\setlength{\rightskip}{0pt plus 5cm}def activity\-Detection.\-Activity\-Detection.\-get\-B\-M\-R (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classactivity_detection_1_1_activity_detection_a8dd2cc520a000ca555f8a478e11ffaf7}
+
+
+Getter for the B\-M\-R value. 
+
+Gets the calculated B\-M\-R for the user 
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value of the B\-M\-R (per day) 
+\end{DoxyReturn}
+\hypertarget{classactivity_detection_1_1_activity_detection_a104e51a618c579e321f6a71f1e05cb87}{\index{activity\-Detection\-::\-Activity\-Detection@{activity\-Detection\-::\-Activity\-Detection}!get\-E\-E@{get\-E\-E}}
+\index{get\-E\-E@{get\-E\-E}!activityDetection::ActivityDetection@{activity\-Detection\-::\-Activity\-Detection}}
+\paragraph[{get\-E\-E}]{\setlength{\rightskip}{0pt plus 5cm}def activity\-Detection.\-Activity\-Detection.\-get\-E\-E (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classactivity_detection_1_1_activity_detection_a104e51a618c579e321f6a71f1e05cb87}
+
+
+Getter for the E\-E value. 
+
+Gets the last E\-E result from the last \# \hyperlink{classactivity_detection_1_1_activity_detection_a25c0d2b32a72ac5be756a5fd74ee0c4c}{update\-Activity} call 
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Last second E\-E 
+\end{DoxyReturn}
+\hypertarget{classactivity_detection_1_1_activity_detection_aaedeb86760c2edb29274956e53240ecc}{\index{activity\-Detection\-::\-Activity\-Detection@{activity\-Detection\-::\-Activity\-Detection}!get\-Energy\-Consumption@{get\-Energy\-Consumption}}
+\index{get\-Energy\-Consumption@{get\-Energy\-Consumption}!activityDetection::ActivityDetection@{activity\-Detection\-::\-Activity\-Detection}}
+\paragraph[{get\-Energy\-Consumption}]{\setlength{\rightskip}{0pt plus 5cm}def activity\-Detection.\-Activity\-Detection.\-get\-Energy\-Consumption (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classactivity_detection_1_1_activity_detection_aaedeb86760c2edb29274956e53240ecc}
+
+
+Getter for the last second energy consuption. 
+
+Gets the last energy consumption result from the last \hyperlink{classactivity_detection_1_1_activity_detection_a25c0d2b32a72ac5be756a5fd74ee0c4c}{update\-Activity} call 
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Last second energy consumption, in Calories 
+\end{DoxyReturn}
+\hypertarget{classactivity_detection_1_1_activity_detection_a25c0d2b32a72ac5be756a5fd74ee0c4c}{\index{activity\-Detection\-::\-Activity\-Detection@{activity\-Detection\-::\-Activity\-Detection}!update\-Activity@{update\-Activity}}
+\index{update\-Activity@{update\-Activity}!activityDetection::ActivityDetection@{activity\-Detection\-::\-Activity\-Detection}}
+\paragraph[{update\-Activity}]{\setlength{\rightskip}{0pt plus 5cm}def activity\-Detection.\-Activity\-Detection.\-update\-Activity (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{x, }
+\item[{}]{y, }
+\item[{}]{z}
+\end{DoxyParamCaption}
+)}}\label{classactivity_detection_1_1_activity_detection_a25c0d2b32a72ac5be756a5fd74ee0c4c}
+
+
+Update activity detection algorithm with last second data. 
+
+The function updates the I\-A\-A based on the provided accelerations and calculates the energy consuptiom (E\-E). Updates the data for the algoritm 
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer \\
+\hline
+{\em x} & list with the last second acceleration data in the X axis \\
+\hline
+{\em y} & list with the last second acceleration data in the Y axis \\
+\hline
+{\em z} & list with the last second acceleration data in the Z axis \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000002}{Todo}]verify normalization of the I\-A\-A \end{DoxyRefDesc}
+
+
+\subsubsection{Member Data Documentation}
+\hypertarget{classactivity_detection_1_1_activity_detection_a7a2350bfa80449984efa3e5ae313a29c}{\index{activity\-Detection\-::\-Activity\-Detection@{activity\-Detection\-::\-Activity\-Detection}!B\-M\-R@{B\-M\-R}}
+\index{B\-M\-R@{B\-M\-R}!activityDetection::ActivityDetection@{activity\-Detection\-::\-Activity\-Detection}}
+\paragraph[{B\-M\-R}]{\setlength{\rightskip}{0pt plus 5cm}int activity\-Detection.\-Activity\-Detection.\-B\-M\-R = .\-023842593\hspace{0.3cm}{\ttfamily [static]}}}\label{classactivity_detection_1_1_activity_detection_a7a2350bfa80449984efa3e5ae313a29c}
+
+
+Default value for B\-M\-R. 
+
+Default B\-M\-R calculated at 2060 Kcal (normal person) divided in the seconds of one day (86400 seconds) \hypertarget{classactivity_detection_1_1_activity_detection_a1a2a17f907231e0ea52ab41de3aa54ed}{\index{activity\-Detection\-::\-Activity\-Detection@{activity\-Detection\-::\-Activity\-Detection}!E\-E@{E\-E}}
+\index{E\-E@{E\-E}!activityDetection::ActivityDetection@{activity\-Detection\-::\-Activity\-Detection}}
+\paragraph[{E\-E}]{\setlength{\rightskip}{0pt plus 5cm}int activity\-Detection.\-Activity\-Detection.\-E\-E = 0\hspace{0.3cm}{\ttfamily [static]}}}\label{classactivity_detection_1_1_activity_detection_a1a2a17f907231e0ea52ab41de3aa54ed}
+
+
+Predicted consumed energy by activity (E\-E) in a second. 
+
+Initalized at 0 
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+I\-M\-U\-Graph/activity\-Detection.\-py\end{DoxyCompactItemize}

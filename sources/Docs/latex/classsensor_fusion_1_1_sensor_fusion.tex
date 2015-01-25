@@ -1,0 +1,297 @@
+\hypertarget{classsensor_fusion_1_1_sensor_fusion}{\subsection{sensor\-Fusion.\-Sensor\-Fusion Class Reference}
+\label{classsensor_fusion_1_1_sensor_fusion}\index{sensor\-Fusion.\-Sensor\-Fusion@{sensor\-Fusion.\-Sensor\-Fusion}}
+}
+
+
+Algorithms and functions for 9\-D\-O\-F fusion.  
+
+
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classsensor_fusion_1_1_sensor_fusion_a07d4323bb03221ed125f2766b026d0bb}{\-\_\-\-\_\-init\-\_\-\-\_\-}
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+def \hyperlink{classsensor_fusion_1_1_sensor_fusion_aaadc9cbd456803c6653038ac12657e52}{update9\-D\-O\-F}
+\begin{DoxyCompactList}\small\item\em Update the orientatation with sensors data. \end{DoxyCompactList}\item 
+def \hyperlink{classsensor_fusion_1_1_sensor_fusion_a1cfe19598a533cf05663860f7ea781e1}{Linear\-Acceleration}
+\begin{DoxyCompactList}\small\item\em Compensate the accelerometer readings from gravity. \end{DoxyCompactList}\item 
+def \hyperlink{classsensor_fusion_1_1_sensor_fusion_a9f3c9bded04e29005b165c31a2f0a223}{Gravity}
+\begin{DoxyCompactList}\small\item\em Determinates the expected direction of the gravity. \end{DoxyCompactList}\item 
+def \hyperlink{classsensor_fusion_1_1_sensor_fusion_ac8206f38acbae0e1ec5efe760a68e3f2}{get\-Q}
+\begin{DoxyCompactList}\small\item\em Getter for the Quaternions. \end{DoxyCompactList}\item 
+def \hyperlink{classsensor_fusion_1_1_sensor_fusion_a2f0233ea0c28bbdfd49edebbee685fe7}{get\-Linear\-Acceleration}
+\begin{DoxyCompactList}\small\item\em Getter for the Linear Acceleration. \end{DoxyCompactList}\item 
+def \hyperlink{classsensor_fusion_1_1_sensor_fusion_acb1010765dd0586aa77982759d15166b}{get\-Gravity\-Direction}
+\begin{DoxyCompactList}\small\item\em Getter for the Gravity direction. \end{DoxyCompactList}\item 
+def \hyperlink{classsensor_fusion_1_1_sensor_fusion_a72e572ae8fecffe0569afec43552c607}{get\-Yaw\-Pitch\-Roll}
+\begin{DoxyCompactList}\small\item\em Getter for Orientation as Yaw, Pith, Roll. \end{DoxyCompactList}\item 
+def \hyperlink{classsensor_fusion_1_1_sensor_fusion_abc7e7a71e6b944d050f177f8319400c5}{get\-Euler}
+\begin{DoxyCompactList}\small\item\em Getter for Orientation as Euler angles. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classsensor_fusion_1_1_sensor_fusion_a6ab17f653266f1a2338f97aca12bcb94}{\hyperlink{classsensor_fusion_1_1_sensor_fusion_a6ab17f653266f1a2338f97aca12bcb94}{q}}\label{classsensor_fusion_1_1_sensor_fusion_a6ab17f653266f1a2338f97aca12bcb94}
+
+\begin{DoxyCompactList}\small\item\em Last quaternion holder. \end{DoxyCompactList}\item 
+\hypertarget{classsensor_fusion_1_1_sensor_fusion_a0fc263c5703f5321a8bf51d107fabe3e}{\hyperlink{classsensor_fusion_1_1_sensor_fusion_a0fc263c5703f5321a8bf51d107fabe3e}{linear\-Acceleration}}\label{classsensor_fusion_1_1_sensor_fusion_a0fc263c5703f5321a8bf51d107fabe3e}
+
+\begin{DoxyCompactList}\small\item\em Last Linear accerlation. \end{DoxyCompactList}\item 
+\hypertarget{classsensor_fusion_1_1_sensor_fusion_aebcf5de7c2d9dfb452f500068bbb06b7}{\hyperlink{classsensor_fusion_1_1_sensor_fusion_aebcf5de7c2d9dfb452f500068bbb06b7}{Kp}}\label{classsensor_fusion_1_1_sensor_fusion_aebcf5de7c2d9dfb452f500068bbb06b7}
+
+\begin{DoxyCompactList}\small\item\em Gains of the algorithm. \end{DoxyCompactList}\item 
+\hypertarget{classsensor_fusion_1_1_sensor_fusion_a1be53fabf90d9ffa7be1a322c307f3f5}{\hyperlink{classsensor_fusion_1_1_sensor_fusion_a1be53fabf90d9ffa7be1a322c307f3f5}{Ki}}\label{classsensor_fusion_1_1_sensor_fusion_a1be53fabf90d9ffa7be1a322c307f3f5}
+
+\begin{DoxyCompactList}\small\item\em Gains of the algorithm. \end{DoxyCompactList}\item 
+\hypertarget{classsensor_fusion_1_1_sensor_fusion_afd9fc75d0ec4e0e620f1435f7aafbbef}{\hyperlink{classsensor_fusion_1_1_sensor_fusion_afd9fc75d0ec4e0e620f1435f7aafbbef}{last\-Update}}\label{classsensor_fusion_1_1_sensor_fusion_afd9fc75d0ec4e0e620f1435f7aafbbef}
+
+\begin{DoxyCompactList}\small\item\em Time between updates. \end{DoxyCompactList}\item 
+\hypertarget{classsensor_fusion_1_1_sensor_fusion_a6a76da95afe8ef8ebc6bfaef0d4cf16f}{{\bfseries ex\-Int}}\label{classsensor_fusion_1_1_sensor_fusion_a6a76da95afe8ef8ebc6bfaef0d4cf16f}
+
+\item 
+\hypertarget{classsensor_fusion_1_1_sensor_fusion_a5c85438b4164322a1d99bc432283cd00}{{\bfseries ey\-Int}}\label{classsensor_fusion_1_1_sensor_fusion_a5c85438b4164322a1d99bc432283cd00}
+
+\item 
+\hypertarget{classsensor_fusion_1_1_sensor_fusion_ad61464d2a851e3c1c2b42df91deb85e6}{{\bfseries ez\-Int}}\label{classsensor_fusion_1_1_sensor_fusion_ad61464d2a851e3c1c2b42df91deb85e6}
+
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Algorithms and functions for 9\-D\-O\-F fusion. 
+
+Uses data from accelerometers, gyroscopes and magnetometers to do sensor fusion and obtain orientation of the device in a quaternion representation. \begin{DoxyAuthor}{Author}
+Sebastian Sepulveda 
+\end{DoxyAuthor}
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classsensor_fusion_1_1_sensor_fusion_a07d4323bb03221ed125f2766b026d0bb}{\index{sensor\-Fusion\-::\-Sensor\-Fusion@{sensor\-Fusion\-::\-Sensor\-Fusion}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!sensorFusion::SensorFusion@{sensor\-Fusion\-::\-Sensor\-Fusion}}
+\paragraph[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def sensor\-Fusion.\-Sensor\-Fusion.\-\_\-\-\_\-init\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classsensor_fusion_1_1_sensor_fusion_a07d4323bb03221ed125f2766b026d0bb}
+
+
+Constructor. 
+
+Initializes variables for the algorithm 
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer \\
+\hline
+\end{DoxyParams}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classsensor_fusion_1_1_sensor_fusion_abc7e7a71e6b944d050f177f8319400c5}{\index{sensor\-Fusion\-::\-Sensor\-Fusion@{sensor\-Fusion\-::\-Sensor\-Fusion}!get\-Euler@{get\-Euler}}
+\index{get\-Euler@{get\-Euler}!sensorFusion::SensorFusion@{sensor\-Fusion\-::\-Sensor\-Fusion}}
+\paragraph[{get\-Euler}]{\setlength{\rightskip}{0pt plus 5cm}def sensor\-Fusion.\-Sensor\-Fusion.\-get\-Euler (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{deg = {\ttfamily False}}
+\end{DoxyParamCaption}
+)}}\label{classsensor_fusion_1_1_sensor_fusion_abc7e7a71e6b944d050f177f8319400c5}
+
+
+Getter for Orientation as Euler angles. 
+
+Return last calculated orientation expresed as euler angles from the last call of update\-A\-H\-R\-S 
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer \\
+\hline
+{\em deg} & 
+\begin{DoxyItemize}
+\item {\bfseries T\-R\-U\-E} \-: Return angles in degrees
+\item {\bfseries F\-A\-L\-S\-E} \-: Return angles in radians 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector with Euler angles 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Fabio Varesano 
+\end{DoxyAuthor}
+\hypertarget{classsensor_fusion_1_1_sensor_fusion_acb1010765dd0586aa77982759d15166b}{\index{sensor\-Fusion\-::\-Sensor\-Fusion@{sensor\-Fusion\-::\-Sensor\-Fusion}!get\-Gravity\-Direction@{get\-Gravity\-Direction}}
+\index{get\-Gravity\-Direction@{get\-Gravity\-Direction}!sensorFusion::SensorFusion@{sensor\-Fusion\-::\-Sensor\-Fusion}}
+\paragraph[{get\-Gravity\-Direction}]{\setlength{\rightskip}{0pt plus 5cm}def sensor\-Fusion.\-Sensor\-Fusion.\-get\-Gravity\-Direction (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classsensor_fusion_1_1_sensor_fusion_acb1010765dd0586aa77982759d15166b}
+
+
+Getter for the Gravity direction. 
+
+Return last calculated gravity direction from the last call of update\-A\-H\-R\-S 
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Last calculated Gravity Direction 
+\end{DoxyReturn}
+\hypertarget{classsensor_fusion_1_1_sensor_fusion_a2f0233ea0c28bbdfd49edebbee685fe7}{\index{sensor\-Fusion\-::\-Sensor\-Fusion@{sensor\-Fusion\-::\-Sensor\-Fusion}!get\-Linear\-Acceleration@{get\-Linear\-Acceleration}}
+\index{get\-Linear\-Acceleration@{get\-Linear\-Acceleration}!sensorFusion::SensorFusion@{sensor\-Fusion\-::\-Sensor\-Fusion}}
+\paragraph[{get\-Linear\-Acceleration}]{\setlength{\rightskip}{0pt plus 5cm}def sensor\-Fusion.\-Sensor\-Fusion.\-get\-Linear\-Acceleration (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classsensor_fusion_1_1_sensor_fusion_a2f0233ea0c28bbdfd49edebbee685fe7}
+
+
+Getter for the Linear Acceleration. 
+
+Return last calculated linear acceleration from the last call of update\-A\-H\-R\-S 
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Last calculated Linear Acceleration 
+\end{DoxyReturn}
+\hypertarget{classsensor_fusion_1_1_sensor_fusion_ac8206f38acbae0e1ec5efe760a68e3f2}{\index{sensor\-Fusion\-::\-Sensor\-Fusion@{sensor\-Fusion\-::\-Sensor\-Fusion}!get\-Q@{get\-Q}}
+\index{get\-Q@{get\-Q}!sensorFusion::SensorFusion@{sensor\-Fusion\-::\-Sensor\-Fusion}}
+\paragraph[{get\-Q}]{\setlength{\rightskip}{0pt plus 5cm}def sensor\-Fusion.\-Sensor\-Fusion.\-get\-Q (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classsensor_fusion_1_1_sensor_fusion_ac8206f38acbae0e1ec5efe760a68e3f2}
+
+
+Getter for the Quaternions. 
+
+Return last calculated quaternion from the last call of update\-A\-H\-R\-S 
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Last calculated quaternion 
+\end{DoxyReturn}
+\hypertarget{classsensor_fusion_1_1_sensor_fusion_a72e572ae8fecffe0569afec43552c607}{\index{sensor\-Fusion\-::\-Sensor\-Fusion@{sensor\-Fusion\-::\-Sensor\-Fusion}!get\-Yaw\-Pitch\-Roll@{get\-Yaw\-Pitch\-Roll}}
+\index{get\-Yaw\-Pitch\-Roll@{get\-Yaw\-Pitch\-Roll}!sensorFusion::SensorFusion@{sensor\-Fusion\-::\-Sensor\-Fusion}}
+\paragraph[{get\-Yaw\-Pitch\-Roll}]{\setlength{\rightskip}{0pt plus 5cm}def sensor\-Fusion.\-Sensor\-Fusion.\-get\-Yaw\-Pitch\-Roll (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{deg = {\ttfamily False}}
+\end{DoxyParamCaption}
+)}}\label{classsensor_fusion_1_1_sensor_fusion_a72e572ae8fecffe0569afec43552c607}
+
+
+Getter for Orientation as Yaw, Pith, Roll. 
+
+Return last calculated orientation expresed as yaw, pitch and roll from the last call of update\-A\-H\-R\-S 
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer \\
+\hline
+{\em deg} & 
+\begin{DoxyItemize}
+\item {\bfseries T\-R\-U\-E} \-: Return angles in degrees
+\item {\bfseries F\-A\-L\-S\-E} \-: Return angles in radians 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector with yaw, pitch and roll 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Fabio Varesano 
+\end{DoxyAuthor}
+\hypertarget{classsensor_fusion_1_1_sensor_fusion_a9f3c9bded04e29005b165c31a2f0a223}{\index{sensor\-Fusion\-::\-Sensor\-Fusion@{sensor\-Fusion\-::\-Sensor\-Fusion}!Gravity@{Gravity}}
+\index{Gravity@{Gravity}!sensorFusion::SensorFusion@{sensor\-Fusion\-::\-Sensor\-Fusion}}
+\paragraph[{Gravity}]{\setlength{\rightskip}{0pt plus 5cm}def sensor\-Fusion.\-Sensor\-Fusion.\-Gravity (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{q}
+\end{DoxyParamCaption}
+)}}\label{classsensor_fusion_1_1_sensor_fusion_a9f3c9bded04e29005b165c31a2f0a223}
+
+
+Determinates the expected direction of the gravity. 
+
+Calculated the expected directions of the gravity in x, y and z frame of reference 
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer \\
+\hline
+{\em q} & Quaternion representing the orientation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+g vector with expected direction of the gravity 
+\end{DoxyReturn}
+\hypertarget{classsensor_fusion_1_1_sensor_fusion_a1cfe19598a533cf05663860f7ea781e1}{\index{sensor\-Fusion\-::\-Sensor\-Fusion@{sensor\-Fusion\-::\-Sensor\-Fusion}!Linear\-Acceleration@{Linear\-Acceleration}}
+\index{Linear\-Acceleration@{Linear\-Acceleration}!sensorFusion::SensorFusion@{sensor\-Fusion\-::\-Sensor\-Fusion}}
+\paragraph[{Linear\-Acceleration}]{\setlength{\rightskip}{0pt plus 5cm}def sensor\-Fusion.\-Sensor\-Fusion.\-Linear\-Acceleration (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{q, }
+\item[{}]{ax, }
+\item[{}]{ay, }
+\item[{}]{az}
+\end{DoxyParamCaption}
+)}}\label{classsensor_fusion_1_1_sensor_fusion_a1cfe19598a533cf05663860f7ea781e1}
+
+
+Compensate the accelerometer readings from gravity. 
+
+Removes the offset generated by the earth's gravity 
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer \\
+\hline
+{\em q} & Quaternion representing the orientation \\
+\hline
+{\em acc} & Readings coming from an accelerometer, in g \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+3\-D vector with the Linear acceleration, in g 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Fabio Varesano 
+\end{DoxyAuthor}
+\hypertarget{classsensor_fusion_1_1_sensor_fusion_aaadc9cbd456803c6653038ac12657e52}{\index{sensor\-Fusion\-::\-Sensor\-Fusion@{sensor\-Fusion\-::\-Sensor\-Fusion}!update9\-D\-O\-F@{update9\-D\-O\-F}}
+\index{update9\-D\-O\-F@{update9\-D\-O\-F}!sensorFusion::SensorFusion@{sensor\-Fusion\-::\-Sensor\-Fusion}}
+\paragraph[{update9\-D\-O\-F}]{\setlength{\rightskip}{0pt plus 5cm}def sensor\-Fusion.\-Sensor\-Fusion.\-update9\-D\-O\-F (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{gyroscope, }
+\item[{}]{accelerometer, }
+\item[{}]{magnetometer}
+\end{DoxyParamCaption}
+)}}\label{classsensor_fusion_1_1_sensor_fusion_aaadc9cbd456803c6653038ac12657e52}
+
+
+Update the orientatation with sensors data. 
+
+Sensor fusion algorithm ported by Fabio Varesano to Python from the Sebastian Madgwick 9\-D\-O\-F fusion.
+
+Data must be inputed as\-:
+\begin{DoxyItemize}
+\item Accelerations in g (gravities)
+\item Gyroscope in radians per second (rad/sec)
+\item Magnetometer in Gauss (Gs)
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer \\
+\hline
+{\em gyroscope} & Gyroscope data as \mbox{[}X,Y,Z\mbox{]} in rad/sec \\
+\hline
+{\em accelerometer} & Accelerometer data as \mbox{[}X,Y,Z\mbox{]} in g (gravities) \\
+\hline
+{\em magnetometer} & Magnetometer data as \mbox{[}X,Y,Z\mbox{]} in Gs\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Fabio Varesano 
+
+Sebastian Madgwick 
+\end{DoxyAuthor}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+I\-M\-U\-Graph/sensor\-Fusion.\-py\end{DoxyCompactItemize}

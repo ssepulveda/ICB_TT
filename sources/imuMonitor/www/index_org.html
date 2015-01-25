@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>IMU Sever</title>
+
+      <script src="js/autobahn.min.jgz"></script>
+      <script src="js/jquery-2.1.1.min.js"></script>
+
+      <script type="text/javascript">
+
+         var sess = null;
+
+         $(document).ready(function()
+         {
+            // the URL of the WAMP Router (e.g. Crossbar.io)
+            //
+            var wsuri;
+            if (document.location.origin == "file://") {
+               wsuri = "ws://localhost:9000";
+            } else {
+               wsuri = "ws://" + document.location.hostname + ":9000";
+            }
+            
+            // connect to WAMP server
+            //
+            var connection = new autobahn.Connection({
+               url: wsuri,
+               realm: 'realm1'
+            });
+
+            connection.onopen = function (session) {
+               console.log("connected to " + wsuri);
+               sess = session;
+            };
+
+            connection.onclose = function (reason, details) {
+               console.log("connection gone", reason, details);
+               sess = null;
+            }
+
+            connection.open();
+         });
+
+         function test() {
+            var args = null;
+            var proc;
+
+            proc = "com.example.imu.test";
+
+            sess.call(proc, args).then(
+               function (res) {
+                  $('#test').html(res); 
+               },
+               function (err) {
+                  alert("Error (" + err.reason + ")");
+               }
+            );
+         }
+
+         function detectImu() {
+            var args = null;
+            var proc;
+
+            proc = "com.example.imu.detect";
+
+            sess.call(proc, args).then(
+               function (res) {
+                  $('#detectImu').html(res); 
+               },
+               function (err) {
+                  alert("Error (" + err.reason + ")");
+               }
+            );
+         }
+
+         function setFileName() {
+            //~ var args = ["lkasjdkljalksjd"];
+            var args = [document.getElementById('fileName').value];
+            
+            sess.call("com.example.imu.filename", args);
+         }
+
+         function initAdq() {
+             var args = null;
+            sess.call("com.example.imu.startimu", args);
+         }
+
+         function stopAdq() {
+             var args = null;
+            sess.call("com.example.imu.stopimu", args);
+         }
+     </script>
+   </head>
+   
+   <body>
+      <h1>Tester</h1>
+      <button onclick='test()'>test</button>
+      <span id="test"></span>
+
+      </br>
+      <button onclick='detectImu()'>detectar Imus</button>
+      <span id="detectImu"></span>
+
+      </br>
+      <button onclick='setFileName()'>Nombre del archivo</button>
+      <input class="textBox" id="fileName" type="text"/>
+
+      <button onclick='initAdq()'>Iniciar adqyuisicion</button>
+      <button onclick='stopAdq()'>Parar adquisicion</button>
+   </body>
+
+ </html>

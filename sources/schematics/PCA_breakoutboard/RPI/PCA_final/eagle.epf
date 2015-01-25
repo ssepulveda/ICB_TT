@@ -1,0 +1,31 @@
+[Eagle]
+Version="06 05 00"
+Platform="Linux"
+Serial="62191E841E-LSR-WLM-1EL"
+Globals="Globals"
+Desktop="Desktop"
+
+[Globals]
+AutoSaveProject=1
+UsedLibrary="/home/ssepulveda/.eagle/lbr/eagle-ltspice.lbr"
+UsedLibrary="/home/ssepulveda/.eagle/lbr/jump-0r-smd.lbr"
+UsedLibrary="/home/ssepulveda/.eagle/lbr/jumper.lbr"
+UsedLibrary="/home/ssepulveda/.eagle/lbr/pinhead.lbr"
+UsedLibrary="/home/ssepulveda/.eagle/lbr/rcl.lbr"
+UsedLibrary="/home/ssepulveda/.eagle/lbr/ref-packages-longpad.lbr"
+UsedLibrary="/home/ssepulveda/.eagle/lbr/ref-packages.lbr"
+UsedLibrary="/home/ssepulveda/.eagle/lbr/resistor.lbr"
+UsedLibrary="/home/ssepulveda/.eagle/lbr/solpad.lbr"
+UsedLibrary="/home/ssepulveda/.eagle/lbr/supply1.lbr"
+UsedLibrary="/home/ssepulveda/.eagle/lbr/supply2.lbr"
+UsedLibrary="/home/ssepulveda/Sources/Eagle/Libs/pca9547.lbr"
+
+[Win_1]
+Type="Control Panel"
+Loc="313 116 1230 513"
+State=2
+Number=0
+
+[Desktop]
+Screen="1366 768"
+Window="Win_1"

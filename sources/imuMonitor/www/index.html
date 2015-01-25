@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <head>
+        <title>MCIB - Universidad de Valparaíso</title>
+
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap-responsive.css" rel="stylesheet">
+<!--
+        <link href="css/style.css" rel="stylesheet">
+-->
+        
+        <!-- Custom styles for this template -->
+        <link href="main.css" rel="stylesheet">
+
+        <script src="js/autobahn.min.jgz"></script>
+        <script src="js/jquery-2.1.1.min.js"></script>
+
+        <script type="text/javascript">
+            var sess = null;
+            var adquiring = false;
+
+             $(document).ready(function(){
+                // the URL of the WAMP Router (e.g. Crossbar.io)
+                var wsuri;
+                if (document.location.origin == "file://") {
+                    wsuri = "ws://localhost:9000";
+                } else {
+                    wsuri = "ws://" + document.location.hostname + ":9000";
+                }
+                
+                // connect to WAMP server
+                var connection = new autobahn.Connection({
+                    url: wsuri,
+                    realm: 'realm1'
+                });
+
+                connection.onopen = function (session) {
+                    console.log("connected to " + wsuri);
+                    sess = session;
+                };
+
+                connection.onclose = function (reason, details) {
+                    console.log("connection gone", reason, details);
+                    sess = null;
+                }
+
+                connection.open();
+            });
+
+             function test() {
+                var args = null;
+                var proc = "com.example.imu.test";
+
+                sess.call(proc, args).then(
+                   function (res) {
+                      $('#test').html(res);
+                   },
+                   function (err) {
+                      alert("Error (" + err.reason + ")");
+                   }
+                );
+
+                detectImu();
+             }
+
+            function detectImu() {
+                var args = null;
+                var proc  = "com.example.imu.detect";
+
+                sess.call(proc, args).then(
+                    function (res) {
+                        $('#detectedImu').html(res); 
+                        },
+                        function (err) {
+                            alert("Error (" + err.reason + ")");
+                        }
+                );
+            }
+
+            function setFileName() {
+                var args = [document.getElementById('fileName').value];
+                sess.call("com.example.imu.filename", args);
+            }
+
+            function initAdq() {
+                adquiring = true;
+                var args = null;
+                sess.call("com.example.imu.startimu", args);
+            }
+
+            function stopAdq() {
+                adquiring = false;
+                var args = null;
+                sess.call("com.example.imu.stopimu", args);
+            }
+
+            window.setInterval(
+                function loop() {
+                    if (adquiring == true){
+                        sess.call("com.example.imu.getdata", null).then(
+                            function (res) {
+                                $('#t').html(res); 
+                                },
+                                function (err) {
+                                    $('#t').html("error");
+                                }
+                        );
+                    }
+                }
+            , 1000);
+            
+        </script>
+    </head>
+
+    <body>
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse" >
+                        <i class="icon-tasks"></i>
+
+                        <a href="#" class="brand">Universidad de Valparaíso</a>
+<!--
+                    <a href="#" class="brand"> <img src="img/logo.png"></a>
+-->
+                    </a>
+
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right"> 
+                            <li class="active"><a href="#"><i class="icon-home"></i> Home</a></li>
+                            <li><a href="/data"><i class="icon-file"></i> Archivos</a></li>
+                        </ul>
+                    </div>                
+                </div>
+            </div>
+        </div>
+
+        
+        <div class= "hero-unit centered-text">
+            <div class = "container">
+                <h2>Monitor IMU</h1>
+                <a class="btn btn-primary" href="#menu-archivo" role="button" data-toggle="modal" onclick="test()">Configurar Adquisición</a>
+                <a class="btn btn-success" role="button" onclick="initAdq()">Iniciar Adquisición</a>
+                <a class="btn btn-danger" role="button" onclick="stopAdq()">Detener Adquisición</a>
+            </div>
+        </div>
+
+        <div class="container">
+            <span id="t"></span>
+            <div class="row-fluid">
+                <div class="span6 centered-text">
+                    <h3>IMU 1</h3>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <td></td>
+                                <td>g</td>
+                                <td>º/s</td>
+                                <td>Gs</td>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>X</td>
+                                <td><span id="ax0"> </span></td>
+                                <td><span id="gx0"> </span></td>
+                                <td><span id="mx0"> </span></td>
+                            </tr>
+                            <tr>
+                                <td>Y</td>
+                                <td><span id="ay0"> </span></td>
+                                <td><span id="gy0"> </span></td>
+                                <td><span id="my0"> </span></td>
+                            </tr>
+                            <tr>
+                                <td>Z</td>
+                                <td><span id="az0"> </span></td>
+                                <td><span id="gz0"> </span></td>
+                                <td><span id="mz0"> </span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="span6 centered-text">
+                    <h3>IMU 2</h3>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <td></td>
+                                <td>g</td>
+                                <td>º/s</td>
+                                <td>Gs</td>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>X</td>
+                                <td><span id="ax1"> </span></td>
+                                <td><span id="gx1"> </span></td>
+                                <td><span id="mx1"> </span></td>
+                            </tr>
+                            <tr>
+                                <td>Y</td>
+                                <td><span id="ay1"> </span></td>
+                                <td><span id="gy1"> </span></td>
+                                <td><span id="my1"> </span></td>
+                            </tr>
+                            <tr>
+                                <td>Z</td>
+                                <td><span id="az1"> </span></td>
+                                <td><span id="gz1"> </span></td>
+                                <td><span id="mz1"> </span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="row-fluid">
+                    <div class="span6 centered-text">
+                        <h3>IMU 3</h3>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <td></td>
+                                    <td>g</td>
+                                    <td>º/s</td>
+                                    <td>Gs</td>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>X</td>
+                                    <td><span id="ax2"> </span></td>
+                                    <td><span id="gx2"> </span></td>
+                                    <td><span id="mx2"> </span></td>
+                                </tr>
+                                <tr>
+                                    <td>Y</td>
+                                    <td><span id="ay2"> </span></td>
+                                    <td><span id="gy2"> </span></td>
+                                    <td><span id="my2"> </span></td>
+                                </tr>
+                                <tr>
+                                    <td>Z</td>
+                                    <td><span id="az2"> </span></td>
+                                    <td><span id="gz2"> </span></td>
+                                    <td><span id="mz2"> </span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="span6 centered-text">
+                        <h3>IMU 4</h3>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <td></td>
+                                    <td>g</td>
+                                    <td>º/s</td>
+                                    <td>Gs</td>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>X</td>
+                                    <td><span id="ax3"> </span></td>
+                                    <td><span id="gx3"> </span></td>
+                                    <td><span id="mx3"> </span></td>
+                                </tr>
+                                <tr>
+                                    <td>Y</td>
+                                    <td><span id="ay3"> </span></td>
+                                    <td><span id="gy3"> </span></td>
+                                    <td><span id="my3"> </span></td>
+                                </tr>
+                                <tr>
+                                    <td>Z</td>
+                                    <td><span id="az3"> </span></td>
+                                    <td><span id="gz3"> </span></td>
+                                    <td><span id="mz3"> </span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="row-fluid">
+                <div class="span6 centered-text">
+                    <h3>IMU 5</h3>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <td></td>
+                                <td>g</td>
+                                <td>º/s</td>
+                                <td>Gs</td>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>X</td>
+                                <td><span id="ax4"> </span></td>
+                                <td><span id="gx4"> </span></td>
+                                <td><span id="mx4"> </span></td>
+                            </tr>
+                            <tr>
+                                <td>Y</td>
+                                <td><span id="ay4"> </span></td>
+                                <td><span id="gy4"> </span></td>
+                                <td><span id="my4"> </span></td>
+                            </tr>
+                            <tr>
+                                <td>Z</td>
+                                <td><span id="az4"> </span></td>
+                                <td><span id="gz4"> </span></td>
+                                <td><span id="mz4"> </span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="span6 centered-text">
+                    <h3>IMU 6</h3>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <td></td>
+                                <td>g</td>
+                                <td>º/s</td>
+                                <td>Gs</td>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>X</td>
+                                <td><span id="ax5"> </span></td>
+                                <td><span id="gx5"> </span></td>
+                                <td><span id="mx5"> </span></td>
+                            </tr>
+                            <tr>
+                                <td>Y</td>
+                                <td><span id="ay5"> </span></td>
+                                <td><span id="gy5"> </span></td>
+                                <td><span id="my5"> </span></td>
+                            </tr>
+                            <tr>
+                                <td>Z</td>
+                                <td><span id="az5"> </span></td>
+                                <td><span id="gz5"> </span></td>
+                                <td><span id="mz5"> </span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="navbar navbar-fixed-bottom">
+            <div class="navbar-inner">
+                <div class="container">
+                    <p class="pull-left">
+                        <a href="mailto:sebastian.sepulvedas@alumnos.uv.cl">Sebastián Sepúlveda</a><br>
+                        Estudiante Magister en Ciencias de la Ingeniería, Mencion Ingeniería Civil Biomédica<br>
+                        Tesis asociada al proyecto FONDEF ITG1310035
+                    </p>
+                    <p class="muted pull-right">
+                        <a href="mailto:pablo.reyes@uv.cl">Dr. Pablo Reyes</a>, Profesor Guía<br>
+                        <a href="mailto:alejandro.weinstein@uv.cl">Dr. Alejandro Weinstein</a>, Profesor Co-Guia<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pop Up menues -->
+
+        <div id="menu-archivo" class="modal hide fade">
+            <div class="modal-header">
+                <h2 id="test"></h2>
+            </div>
+
+            <div class="modal-body">
+                <p>IMUs Detectados: <span id="detectedImu"></span></p>
+                <input id="fileName" type="text" class="form-control" placeholder="Nombre del Archivo"></br>
+                <input id="comment1" type="text" class="form-control" placeholder="Comentario General"></br>
+                <input id="comment1" type="text" class="form-control" placeholder="Comentario IMU1"></br>
+                <input id="comment2" type="text" class="form-control" placeholder="Comentario IMU2"></br>
+                <input id="comment3" type="text" class="form-control" placeholder="Comentario IMU3"></br>
+                <input id="comment4" type="text" class="form-control" placeholder="Comentario IMU4"></br>
+                <input id="comment5" type="text" class="form-control" placeholder="Comentario IMU5"></br>
+                <input id="comment6" type="text" class="form-control" placeholder="Comentario IMU6">
+            </div>
+            
+            <div class="modal-footer">
+                <a class="btn btn-warning" data-dismiss="modal" href="#" onClick="setFileName()"><i class="icon-remove"></i> Guardar</a>
+            </div>
+        </div>
+
+        <script src="js/jquery-2.1.1.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.js"></script>
+    </body>
+</html>

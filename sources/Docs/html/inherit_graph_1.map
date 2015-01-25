@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node2" href="$classbase_thread_1_1_base_thread.html" title="Defines basic methods for dealing with Qt Threads and all Threads. " alt="" coords="126,56,290,83"/>
+<area shape="rect" id="node3" href="$classcube_1_1_cube.html" title="Displays the orientation as a 3D cube. " alt="" coords="392,5,477,32"/>
+<area shape="rect" id="node4" href="$classserial_thread_1_1_serial_thread.html" title="Obtain and scale serial data in a thread. " alt="" coords="349,56,520,83"/>
+<area shape="rect" id="node5" href="$classserial_thread__mutiprocessing_1_1_serial_thread.html" title="Obtain and scale serial data in a thread. " alt="" coords="339,107,531,149"/>
+</map>

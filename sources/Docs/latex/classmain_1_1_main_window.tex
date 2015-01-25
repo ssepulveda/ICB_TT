@@ -1,0 +1,469 @@
+\hypertarget{classmain_1_1_main_window}{\subsection{main.\-Main\-Window Class Reference}
+\label{classmain_1_1_main_window}\index{main.\-Main\-Window@{main.\-Main\-Window}}
+}
+
+
+Managing and plotting adquired data.  
+
+
+
+
+Inheritance diagram for main.\-Main\-Window\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classmain_1_1_main_window__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for main.\-Main\-Window\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classmain_1_1_main_window__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classmain_1_1_main_window_afe60362fc3324bc53b3d0adc171cbc50}{\-\_\-\-\_\-init\-\_\-\-\_\-}
+\begin{DoxyCompactList}\small\item\em Configures initial settings of the window. \end{DoxyCompactList}\item 
+def \hyperlink{classmain_1_1_main_window_a2472e07b27a09bae26c1c064192cc7a0}{start}
+\begin{DoxyCompactList}\small\item\em Executed when pressing Start Buttton. \end{DoxyCompactList}\item 
+def \hyperlink{classmain_1_1_main_window_ac92cdbf6322bf71a1222ac4be72bb6c0}{update\-Data}
+\begin{DoxyCompactList}\small\item\em Executed every time new data is adquired. \end{DoxyCompactList}\item 
+\hypertarget{classmain_1_1_main_window_ae9e3c6d5509ddfa334a8c227565e6802}{def {\bfseries update\-Activity}}\label{classmain_1_1_main_window_ae9e3c6d5509ddfa334a8c227565e6802}
+
+\item 
+def \hyperlink{classmain_1_1_main_window_a758087e2cfebe24205f39e60d7b66840}{update\-Plot}
+\begin{DoxyCompactList}\small\item\em Executed every 20 ms for updating plot. \end{DoxyCompactList}\item 
+def \hyperlink{classmain_1_1_main_window_a15ec36789cc84d0227b1b6f680ed7b9b}{stop}
+\begin{DoxyCompactList}\small\item\em Executed when Stop Button is pressed. \end{DoxyCompactList}\item 
+def \hyperlink{classmain_1_1_main_window_a0f04f1f65afb676ff40644e3479ed429}{configure\-Plot}
+\begin{DoxyCompactList}\small\item\em Axis configuration of a Py\-Qt\-Graph plot. \end{DoxyCompactList}\item 
+def \hyperlink{classmain_1_1_main_window_a043c23015ff1c2e15228020289d2084b}{set\-U\-I\-Locked}
+\begin{DoxyCompactList}\small\item\em Set the lock status of the U\-I elements. \end{DoxyCompactList}\item 
+def \hyperlink{classmain_1_1_main_window_a3b91003f1660c283ae5061f3f228a7e2}{get\-Ports}
+\begin{DoxyCompactList}\small\item\em Gets avaliable serial ports on the system. \end{DoxyCompactList}\item 
+def \hyperlink{classmain_1_1_main_window_a6133369df2df9755fa172a60efc7239f}{reset\-Data}
+\begin{DoxyCompactList}\small\item\em Clear data buffers for plotting. \end{DoxyCompactList}\item 
+\hypertarget{classmain_1_1_main_window_aadf0b01331836efbc9cb5170f0f11085}{def {\bfseries start\-Cube}}\label{classmain_1_1_main_window_aadf0b01331836efbc9cb5170f0f11085}
+
+\end{DoxyCompactItemize}
+\subsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classmain_1_1_main_window_ad4a5b9271a2213e10f7117bfa4f230f1}{{\bfseries ui}}\label{classmain_1_1_main_window_ad4a5b9271a2213e10f7117bfa4f230f1}
+
+\item 
+\hyperlink{classmain_1_1_main_window_ac830383d366fc669473cc4d94ab64efb}{timer}
+\begin{DoxyCompactList}\small\item\em Reference update plot timer. \end{DoxyCompactList}\item 
+\hypertarget{classmain_1_1_main_window_a4f2e2eac4efccf363c3b99c41ad14c48}{\hyperlink{classmain_1_1_main_window_a4f2e2eac4efccf363c3b99c41ad14c48}{timer\-Activity}}\label{classmain_1_1_main_window_a4f2e2eac4efccf363c3b99c41ad14c48}
+
+\begin{DoxyCompactList}\small\item\em Qt4 timer for activity. \end{DoxyCompactList}\item 
+\hyperlink{classmain_1_1_main_window_af7e14bdf821dcadf59ff9a25fdedacc6}{data}
+\begin{DoxyCompactList}\small\item\em Reference for the Threaded serial adquisition. \end{DoxyCompactList}\item 
+\hypertarget{classmain_1_1_main_window_aa93b2cedd13107177781d0044d78e8a0}{\hyperlink{classmain_1_1_main_window_aa93b2cedd13107177781d0044d78e8a0}{cube}}\label{classmain_1_1_main_window_aa93b2cedd13107177781d0044d78e8a0}
+
+\begin{DoxyCompactList}\small\item\em Register the data object with the cube. \end{DoxyCompactList}\item 
+\hypertarget{classmain_1_1_main_window_ac61cc125fc2941916e357bb8219a16ef}{\hyperlink{classmain_1_1_main_window_ac61cc125fc2941916e357bb8219a16ef}{csv}}\label{classmain_1_1_main_window_ac61cc125fc2941916e357bb8219a16ef}
+
+\begin{DoxyCompactList}\small\item\em export data \end{DoxyCompactList}\item 
+\hyperlink{classmain_1_1_main_window_a79bfc498bc7afae5335f0afa0457424c}{activity}
+\begin{DoxyCompactList}\small\item\em Reference for the activity detection algorithm. \end{DoxyCompactList}\item 
+\hyperlink{classmain_1_1_main_window_ac77d273e1ae89b15533af18cd3501efa}{fall}
+\begin{DoxyCompactList}\small\item\em Reference for the fall detection algorithm. \end{DoxyCompactList}\item 
+\hypertarget{classmain_1_1_main_window_a3cff3a6070c66ac5b036f882101c4e6c}{\hyperlink{classmain_1_1_main_window_a3cff3a6070c66ac5b036f882101c4e6c}{posture}}\label{classmain_1_1_main_window_a3cff3a6070c66ac5b036f882101c4e6c}
+
+\begin{DoxyCompactList}\small\item\em Reference for. \end{DoxyCompactList}\item 
+\hyperlink{classmain_1_1_main_window_a4bc63f3f953ad9110ea895e0b277e263}{A\-X}
+\begin{DoxyCompactList}\small\item\em Buffer for Acceleration in X axis. \end{DoxyCompactList}\item 
+\hyperlink{classmain_1_1_main_window_a0dd8435606fc6f9398de1c3759a5253e}{A\-Y}
+\begin{DoxyCompactList}\small\item\em Buffer for Acceleration in Y axis. \end{DoxyCompactList}\item 
+\hyperlink{classmain_1_1_main_window_aab50e3554ab90b750539200250578e0b}{A\-Z}
+\begin{DoxyCompactList}\small\item\em Buffer for Acceleration in Z axis. \end{DoxyCompactList}\item 
+\hyperlink{classmain_1_1_main_window_af9250994236464e4aa37faf090fa52b8}{G\-X}
+\begin{DoxyCompactList}\small\item\em Buffer for Angular Velocity in X axis. \end{DoxyCompactList}\item 
+\hyperlink{classmain_1_1_main_window_af19db177442479dc778051475277ee8b}{G\-Y}
+\begin{DoxyCompactList}\small\item\em Buffer for Angular Velocity in Y axis. \end{DoxyCompactList}\item 
+\hyperlink{classmain_1_1_main_window_aa03dbf9da18079ab07a57ebf5e523b58}{G\-Z}
+\begin{DoxyCompactList}\small\item\em Buffer for Angular Velocity in Z axis. \end{DoxyCompactList}\item 
+\hyperlink{classmain_1_1_main_window_a6ab8008a1a68f64ee8b6598a98654812}{M\-X}
+\begin{DoxyCompactList}\small\item\em Buffer for Magnetic field in X axis. \end{DoxyCompactList}\item 
+\hyperlink{classmain_1_1_main_window_aba40307f35350f664481c72b034e7bf8}{M\-Y}
+\begin{DoxyCompactList}\small\item\em Buffer for Magnetic field in Y axis. \end{DoxyCompactList}\item 
+\hyperlink{classmain_1_1_main_window_a3f1d2bc16eb2b7a565f2784e4741be7b}{M\-Z}
+\begin{DoxyCompactList}\small\item\em Buffer for Magnetic field in Z axis. \end{DoxyCompactList}\item 
+\hyperlink{classmain_1_1_main_window_a7b804cc35c413c631e3bb870bc123232}{Y}
+\begin{DoxyCompactList}\small\item\em Buffer for Euler angles in X axis (Yaw) \end{DoxyCompactList}\item 
+\hyperlink{classmain_1_1_main_window_a9000507d15f50881c7cfbd1d562e0feb}{P}
+\begin{DoxyCompactList}\small\item\em Buffer for Euler angles in Y axis (Pitch) \end{DoxyCompactList}\item 
+\hyperlink{classmain_1_1_main_window_a5a2a696186b46f2c1ab6d843781717bb}{R}
+\begin{DoxyCompactList}\small\item\em Buffer for Euler angles in Z axis (Roll) \end{DoxyCompactList}\item 
+\hyperlink{classmain_1_1_main_window_a7a3bc2d61217962905847f0badb89385}{Y2}
+\begin{DoxyCompactList}\small\item\em Buffer for Euler angles in X axis (Yaw) \end{DoxyCompactList}\item 
+\hyperlink{classmain_1_1_main_window_a27dae11aa90ae75ad58556b5f872d05e}{P2}
+\begin{DoxyCompactList}\small\item\em Buffer for Euler angles in Y axis (Pitch) \end{DoxyCompactList}\item 
+\hyperlink{classmain_1_1_main_window_a1a7ef29e7427ad606b2aacd8e1993e66}{R2}
+\begin{DoxyCompactList}\small\item\em Buffer for Euler angles in Z axis (Roll) \end{DoxyCompactList}\item 
+\hyperlink{classmain_1_1_main_window_a689266200b7e4956e7e5c0fa52093dda}{L\-A\-X}
+\begin{DoxyCompactList}\small\item\em Buffer for Linear Acceleration in X axis. \end{DoxyCompactList}\item 
+\hyperlink{classmain_1_1_main_window_a6da1afdc121f84b6eb02beb0db52049a}{L\-A\-Y}
+\begin{DoxyCompactList}\small\item\em Buffer for Linear Acceleration in Y axis. \end{DoxyCompactList}\item 
+\hyperlink{classmain_1_1_main_window_af8a0057e50f3209b22653600a36db22a}{L\-A\-Z}
+\begin{DoxyCompactList}\small\item\em Buffer for Linear Acceleration in Z axis. \end{DoxyCompactList}\item 
+\hyperlink{classmain_1_1_main_window_ac295e7edaa6b0c00592ea04ecd01ce78}{P\-O\-S}
+\begin{DoxyCompactList}\small\item\em Indicates the current index for storing data in the buffers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Managing and plotting adquired data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Qt\-Gui.\-Q\-Main\-Window} & Qt4 Main Window reference \\
+\hline
+\end{DoxyParams}
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classmain_1_1_main_window_afe60362fc3324bc53b3d0adc171cbc50}{\index{main\-::\-Main\-Window@{main\-::\-Main\-Window}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!main::MainWindow@{main\-::\-Main\-Window}}
+\paragraph[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def main.\-Main\-Window.\-\_\-\-\_\-init\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classmain_1_1_main_window_afe60362fc3324bc53b3d0adc171cbc50}
+
+
+Configures initial settings of the window. 
+
+Initialize data, plots, imported functions and timers 
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classmain_1_1_main_window_a0f04f1f65afb676ff40644e3479ed429}{\index{main\-::\-Main\-Window@{main\-::\-Main\-Window}!configure\-Plot@{configure\-Plot}}
+\index{configure\-Plot@{configure\-Plot}!main::MainWindow@{main\-::\-Main\-Window}}
+\paragraph[{configure\-Plot}]{\setlength{\rightskip}{0pt plus 5cm}def main.\-Main\-Window.\-configure\-Plot (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{plot, }
+\item[{}]{Range, }
+\item[{}]{title, }
+\item[{}]{unit}
+\end{DoxyParamCaption}
+)}}\label{classmain_1_1_main_window_a0f04f1f65afb676ff40644e3479ed429}
+
+
+Axis configuration of a Py\-Qt\-Graph plot. 
+
+Stops data threads, timers and unlocks U\-I. 
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+{\em plot} & The reference to the plot to be configured \\
+\hline
+{\em Range} & The range (+/-\/) for the Y axis of the plot \\
+\hline
+{\em title} & The title of the plot \\
+\hline
+{\em unit} & The measurement unit for the plot (auto-\/scaled) \\
+\hline
+\end{DoxyParams}
+\hypertarget{classmain_1_1_main_window_a3b91003f1660c283ae5061f3f228a7e2}{\index{main\-::\-Main\-Window@{main\-::\-Main\-Window}!get\-Ports@{get\-Ports}}
+\index{get\-Ports@{get\-Ports}!main::MainWindow@{main\-::\-Main\-Window}}
+\paragraph[{get\-Ports}]{\setlength{\rightskip}{0pt plus 5cm}def main.\-Main\-Window.\-get\-Ports (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classmain_1_1_main_window_a3b91003f1660c283ae5061f3f228a7e2}
+
+
+Gets avaliable serial ports on the system. 
+
+Search trough all avaliable serial ports (virtuals included) and lists only those who have a connection avaliable. 
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em port\-List} & list with the serial ports routes \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{classmain_1_1_main_window_a6133369df2df9755fa172a60efc7239f}{\index{main\-::\-Main\-Window@{main\-::\-Main\-Window}!reset\-Data@{reset\-Data}}
+\index{reset\-Data@{reset\-Data}!main::MainWindow@{main\-::\-Main\-Window}}
+\paragraph[{reset\-Data}]{\setlength{\rightskip}{0pt plus 5cm}def main.\-Main\-Window.\-reset\-Data (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classmain_1_1_main_window_a6133369df2df9755fa172a60efc7239f}
+
+
+Clear data buffers for plotting. 
+
+Fill with zeroes all data buffers used for plotting and position the data.
+
+Size of the buffers can be changed by the class variable W\-I\-N\-D\-O\-W 
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classmain_1_1_main_window_a043c23015ff1c2e15228020289d2084b}{\index{main\-::\-Main\-Window@{main\-::\-Main\-Window}!set\-U\-I\-Locked@{set\-U\-I\-Locked}}
+\index{set\-U\-I\-Locked@{set\-U\-I\-Locked}!main::MainWindow@{main\-::\-Main\-Window}}
+\paragraph[{set\-U\-I\-Locked}]{\setlength{\rightskip}{0pt plus 5cm}def main.\-Main\-Window.\-set\-U\-I\-Locked (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{bool\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{classmain_1_1_main_window_a043c23015ff1c2e15228020289d2084b}
+
+
+Set the lock status of the U\-I elements. 
+
+Enables or disables U\-I elements of the window. Executed during adquisition, blocks U\-I elements to only enable the Stop button and disable configuration U\-I elements.
+
+
+\begin{DoxyItemize}
+\item if {\ttfamily bool\-\_\-} = {\bfseries T\-R\-U\-E\-:} allows configuration of the adquisition
+\item if {\ttfamily bool\-\_\-} = {\bfseries F\-A\-L\-S\-E\-:} disables configuratin of the adquisition 
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+{\em bool\-\_\-} & The status of the U\-I \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\hypertarget{classmain_1_1_main_window_a2472e07b27a09bae26c1c064192cc7a0}{\index{main\-::\-Main\-Window@{main\-::\-Main\-Window}!start@{start}}
+\index{start@{start}!main::MainWindow@{main\-::\-Main\-Window}}
+\paragraph[{start}]{\setlength{\rightskip}{0pt plus 5cm}def main.\-Main\-Window.\-start (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classmain_1_1_main_window_a2472e07b27a09bae26c1c064192cc7a0}
+
+
+Executed when pressing Start Buttton. 
+
+Starts data adquisition and timers, blocking the U\-I elements 
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classmain_1_1_main_window_a15ec36789cc84d0227b1b6f680ed7b9b}{\index{main\-::\-Main\-Window@{main\-::\-Main\-Window}!stop@{stop}}
+\index{stop@{stop}!main::MainWindow@{main\-::\-Main\-Window}}
+\paragraph[{stop}]{\setlength{\rightskip}{0pt plus 5cm}def main.\-Main\-Window.\-stop (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classmain_1_1_main_window_a15ec36789cc84d0227b1b6f680ed7b9b}
+
+
+Executed when Stop Button is pressed. 
+
+Stops data threads, timers and unlocks U\-I. 
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classmain_1_1_main_window_ac92cdbf6322bf71a1222ac4be72bb6c0}{\index{main\-::\-Main\-Window@{main\-::\-Main\-Window}!update\-Data@{update\-Data}}
+\index{update\-Data@{update\-Data}!main::MainWindow@{main\-::\-Main\-Window}}
+\paragraph[{update\-Data}]{\setlength{\rightskip}{0pt plus 5cm}def main.\-Main\-Window.\-update\-Data (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classmain_1_1_main_window_ac92cdbf6322bf71a1222ac4be72bb6c0}
+
+
+Executed every time new data is adquired. 
+
+Executed by serial\-Thread\-\_\-\-M\-P\-U9150 with Q\-T4 Signal 
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classmain_1_1_main_window_a758087e2cfebe24205f39e60d7b66840}{\index{main\-::\-Main\-Window@{main\-::\-Main\-Window}!update\-Plot@{update\-Plot}}
+\index{update\-Plot@{update\-Plot}!main::MainWindow@{main\-::\-Main\-Window}}
+\paragraph[{update\-Plot}]{\setlength{\rightskip}{0pt plus 5cm}def main.\-Main\-Window.\-update\-Plot (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classmain_1_1_main_window_a758087e2cfebe24205f39e60d7b66840}
+
+
+Executed every 20 ms for updating plot. 
+
+Executed by Qt\-Timer every 20 ms after pressed start button. Stops and reset timer when stop button is pressed. 
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointers \\
+\hline
+\end{DoxyParams}
+
+
+\subsubsection{Member Data Documentation}
+\hypertarget{classmain_1_1_main_window_a79bfc498bc7afae5335f0afa0457424c}{\index{main\-::\-Main\-Window@{main\-::\-Main\-Window}!activity@{activity}}
+\index{activity@{activity}!main::MainWindow@{main\-::\-Main\-Window}}
+\paragraph[{activity}]{\setlength{\rightskip}{0pt plus 5cm}main.\-Main\-Window.\-activity}}\label{classmain_1_1_main_window_a79bfc498bc7afae5335f0afa0457424c}
+
+
+Reference for the activity detection algorithm. 
+
+Activity detection algorithm propossed by Dr. Pablo Reyes \hypertarget{classmain_1_1_main_window_a4bc63f3f953ad9110ea895e0b277e263}{\index{main\-::\-Main\-Window@{main\-::\-Main\-Window}!A\-X@{A\-X}}
+\index{A\-X@{A\-X}!main::MainWindow@{main\-::\-Main\-Window}}
+\paragraph[{A\-X}]{\setlength{\rightskip}{0pt plus 5cm}main.\-Main\-Window.\-A\-X}}\label{classmain_1_1_main_window_a4bc63f3f953ad9110ea895e0b277e263}
+
+
+Buffer for Acceleration in X axis. 
+
+Acceleration in g (gravity) \hypertarget{classmain_1_1_main_window_a0dd8435606fc6f9398de1c3759a5253e}{\index{main\-::\-Main\-Window@{main\-::\-Main\-Window}!A\-Y@{A\-Y}}
+\index{A\-Y@{A\-Y}!main::MainWindow@{main\-::\-Main\-Window}}
+\paragraph[{A\-Y}]{\setlength{\rightskip}{0pt plus 5cm}main.\-Main\-Window.\-A\-Y}}\label{classmain_1_1_main_window_a0dd8435606fc6f9398de1c3759a5253e}
+
+
+Buffer for Acceleration in Y axis. 
+
+Acceleration in g (gravity) \hypertarget{classmain_1_1_main_window_aab50e3554ab90b750539200250578e0b}{\index{main\-::\-Main\-Window@{main\-::\-Main\-Window}!A\-Z@{A\-Z}}
+\index{A\-Z@{A\-Z}!main::MainWindow@{main\-::\-Main\-Window}}
+\paragraph[{A\-Z}]{\setlength{\rightskip}{0pt plus 5cm}main.\-Main\-Window.\-A\-Z}}\label{classmain_1_1_main_window_aab50e3554ab90b750539200250578e0b}
+
+
+Buffer for Acceleration in Z axis. 
+
+Acceleration in g (gravity) \hypertarget{classmain_1_1_main_window_af7e14bdf821dcadf59ff9a25fdedacc6}{\index{main\-::\-Main\-Window@{main\-::\-Main\-Window}!data@{data}}
+\index{data@{data}!main::MainWindow@{main\-::\-Main\-Window}}
+\paragraph[{data}]{\setlength{\rightskip}{0pt plus 5cm}main.\-Main\-Window.\-data}}\label{classmain_1_1_main_window_af7e14bdf821dcadf59ff9a25fdedacc6}
+
+
+Reference for the Threaded serial adquisition. 
+
+Threaded adquisition for a serial device with interrupts using Qt4 signals \hypertarget{classmain_1_1_main_window_ac77d273e1ae89b15533af18cd3501efa}{\index{main\-::\-Main\-Window@{main\-::\-Main\-Window}!fall@{fall}}
+\index{fall@{fall}!main::MainWindow@{main\-::\-Main\-Window}}
+\paragraph[{fall}]{\setlength{\rightskip}{0pt plus 5cm}main.\-Main\-Window.\-fall}}\label{classmain_1_1_main_window_ac77d273e1ae89b15533af18cd3501efa}
+
+
+Reference for the fall detection algorithm. 
+
+Fall detection algorithm propossed by Dr. Pablo Reyes \hypertarget{classmain_1_1_main_window_af9250994236464e4aa37faf090fa52b8}{\index{main\-::\-Main\-Window@{main\-::\-Main\-Window}!G\-X@{G\-X}}
+\index{G\-X@{G\-X}!main::MainWindow@{main\-::\-Main\-Window}}
+\paragraph[{G\-X}]{\setlength{\rightskip}{0pt plus 5cm}main.\-Main\-Window.\-G\-X}}\label{classmain_1_1_main_window_af9250994236464e4aa37faf090fa52b8}
+
+
+Buffer for Angular Velocity in X axis. 
+
+Angular Velocity in degrees/second \hypertarget{classmain_1_1_main_window_af19db177442479dc778051475277ee8b}{\index{main\-::\-Main\-Window@{main\-::\-Main\-Window}!G\-Y@{G\-Y}}
+\index{G\-Y@{G\-Y}!main::MainWindow@{main\-::\-Main\-Window}}
+\paragraph[{G\-Y}]{\setlength{\rightskip}{0pt plus 5cm}main.\-Main\-Window.\-G\-Y}}\label{classmain_1_1_main_window_af19db177442479dc778051475277ee8b}
+
+
+Buffer for Angular Velocity in Y axis. 
+
+Angular Velocity in degrees/second \hypertarget{classmain_1_1_main_window_aa03dbf9da18079ab07a57ebf5e523b58}{\index{main\-::\-Main\-Window@{main\-::\-Main\-Window}!G\-Z@{G\-Z}}
+\index{G\-Z@{G\-Z}!main::MainWindow@{main\-::\-Main\-Window}}
+\paragraph[{G\-Z}]{\setlength{\rightskip}{0pt plus 5cm}main.\-Main\-Window.\-G\-Z}}\label{classmain_1_1_main_window_aa03dbf9da18079ab07a57ebf5e523b58}
+
+
+Buffer for Angular Velocity in Z axis. 
+
+Angular Velocity in degrees/second \hypertarget{classmain_1_1_main_window_a689266200b7e4956e7e5c0fa52093dda}{\index{main\-::\-Main\-Window@{main\-::\-Main\-Window}!L\-A\-X@{L\-A\-X}}
+\index{L\-A\-X@{L\-A\-X}!main::MainWindow@{main\-::\-Main\-Window}}
+\paragraph[{L\-A\-X}]{\setlength{\rightskip}{0pt plus 5cm}main.\-Main\-Window.\-L\-A\-X}}\label{classmain_1_1_main_window_a689266200b7e4956e7e5c0fa52093dda}
+
+
+Buffer for Linear Acceleration in X axis. 
+
+Acceleration in g (gravity). The 9\-D\-O\-F sensor fusion algorithm allows to estimate the expected gravity coordinates and dinamically delete it from the measured acceleration, allowing the gravity compensated linear acceleration \hypertarget{classmain_1_1_main_window_a6da1afdc121f84b6eb02beb0db52049a}{\index{main\-::\-Main\-Window@{main\-::\-Main\-Window}!L\-A\-Y@{L\-A\-Y}}
+\index{L\-A\-Y@{L\-A\-Y}!main::MainWindow@{main\-::\-Main\-Window}}
+\paragraph[{L\-A\-Y}]{\setlength{\rightskip}{0pt plus 5cm}main.\-Main\-Window.\-L\-A\-Y}}\label{classmain_1_1_main_window_a6da1afdc121f84b6eb02beb0db52049a}
+
+
+Buffer for Linear Acceleration in Y axis. 
+
+Acceleration in g (gravity). The 9\-D\-O\-F sensor fusion algorithm allows to estimate the expected gravity coordinates and dinamically delete it from the measured acceleration, allowing the gravity compensated linear acceleration \hypertarget{classmain_1_1_main_window_af8a0057e50f3209b22653600a36db22a}{\index{main\-::\-Main\-Window@{main\-::\-Main\-Window}!L\-A\-Z@{L\-A\-Z}}
+\index{L\-A\-Z@{L\-A\-Z}!main::MainWindow@{main\-::\-Main\-Window}}
+\paragraph[{L\-A\-Z}]{\setlength{\rightskip}{0pt plus 5cm}main.\-Main\-Window.\-L\-A\-Z}}\label{classmain_1_1_main_window_af8a0057e50f3209b22653600a36db22a}
+
+
+Buffer for Linear Acceleration in Z axis. 
+
+Acceleration in g (gravity). The 9\-D\-O\-F sensor fusion algorithm allows to estimate the expected gravity coordinates and dinamically delete it from the measured acceleration, allowing the gravity compensated linear acceleration \hypertarget{classmain_1_1_main_window_a6ab8008a1a68f64ee8b6598a98654812}{\index{main\-::\-Main\-Window@{main\-::\-Main\-Window}!M\-X@{M\-X}}
+\index{M\-X@{M\-X}!main::MainWindow@{main\-::\-Main\-Window}}
+\paragraph[{M\-X}]{\setlength{\rightskip}{0pt plus 5cm}main.\-Main\-Window.\-M\-X}}\label{classmain_1_1_main_window_a6ab8008a1a68f64ee8b6598a98654812}
+
+
+Buffer for Magnetic field in X axis. 
+
+Magnetic field flux in Gauss (Gs) \hypertarget{classmain_1_1_main_window_aba40307f35350f664481c72b034e7bf8}{\index{main\-::\-Main\-Window@{main\-::\-Main\-Window}!M\-Y@{M\-Y}}
+\index{M\-Y@{M\-Y}!main::MainWindow@{main\-::\-Main\-Window}}
+\paragraph[{M\-Y}]{\setlength{\rightskip}{0pt plus 5cm}main.\-Main\-Window.\-M\-Y}}\label{classmain_1_1_main_window_aba40307f35350f664481c72b034e7bf8}
+
+
+Buffer for Magnetic field in Y axis. 
+
+Magnetic field flux in Gauss (Gs) \hypertarget{classmain_1_1_main_window_a3f1d2bc16eb2b7a565f2784e4741be7b}{\index{main\-::\-Main\-Window@{main\-::\-Main\-Window}!M\-Z@{M\-Z}}
+\index{M\-Z@{M\-Z}!main::MainWindow@{main\-::\-Main\-Window}}
+\paragraph[{M\-Z}]{\setlength{\rightskip}{0pt plus 5cm}main.\-Main\-Window.\-M\-Z}}\label{classmain_1_1_main_window_a3f1d2bc16eb2b7a565f2784e4741be7b}
+
+
+Buffer for Magnetic field in Z axis. 
+
+Magnetic field flux in Gauss (Gs) \hypertarget{classmain_1_1_main_window_a9000507d15f50881c7cfbd1d562e0feb}{\index{main\-::\-Main\-Window@{main\-::\-Main\-Window}!P@{P}}
+\index{P@{P}!main::MainWindow@{main\-::\-Main\-Window}}
+\paragraph[{P}]{\setlength{\rightskip}{0pt plus 5cm}main.\-Main\-Window.\-P}}\label{classmain_1_1_main_window_a9000507d15f50881c7cfbd1d562e0feb}
+
+
+Buffer for Euler angles in Y axis (Pitch) 
+
+Angles in degrees. Obtained directicly from the D\-M\-P of the M\-P\-U-\/9150 internal sensor fusion with 6\-D\-O\-F (Accelerometer + Gyroscope). \hypertarget{classmain_1_1_main_window_a27dae11aa90ae75ad58556b5f872d05e}{\index{main\-::\-Main\-Window@{main\-::\-Main\-Window}!P2@{P2}}
+\index{P2@{P2}!main::MainWindow@{main\-::\-Main\-Window}}
+\paragraph[{P2}]{\setlength{\rightskip}{0pt plus 5cm}main.\-Main\-Window.\-P2}}\label{classmain_1_1_main_window_a27dae11aa90ae75ad58556b5f872d05e}
+
+
+Buffer for Euler angles in Y axis (Pitch) 
+
+Angles in degrees. Obtained from the sensor fusion algorithm (9\-D\-O\-F) developed by Sebastian Madgwick and implemented by Fabio Varesano. \hypertarget{classmain_1_1_main_window_ac295e7edaa6b0c00592ea04ecd01ce78}{\index{main\-::\-Main\-Window@{main\-::\-Main\-Window}!P\-O\-S@{P\-O\-S}}
+\index{P\-O\-S@{P\-O\-S}!main::MainWindow@{main\-::\-Main\-Window}}
+\paragraph[{P\-O\-S}]{\setlength{\rightskip}{0pt plus 5cm}main.\-Main\-Window.\-P\-O\-S}}\label{classmain_1_1_main_window_ac295e7edaa6b0c00592ea04ecd01ce78}
+
+
+Indicates the current index for storing data in the buffers. 
+
+Updated and reseted by \hyperlink{classmain_1_1_main_window_ac92cdbf6322bf71a1222ac4be72bb6c0}{update\-Data} limits its count to W\-I\-N\-D\-O\-W variable \hypertarget{classmain_1_1_main_window_a5a2a696186b46f2c1ab6d843781717bb}{\index{main\-::\-Main\-Window@{main\-::\-Main\-Window}!R@{R}}
+\index{R@{R}!main::MainWindow@{main\-::\-Main\-Window}}
+\paragraph[{R}]{\setlength{\rightskip}{0pt plus 5cm}main.\-Main\-Window.\-R}}\label{classmain_1_1_main_window_a5a2a696186b46f2c1ab6d843781717bb}
+
+
+Buffer for Euler angles in Z axis (Roll) 
+
+Angles in degrees. Obtained directicly from the D\-M\-P of the M\-P\-U-\/9150 internal sensor fusion with 6\-D\-O\-F (Accelerometer + Gyroscope). \hypertarget{classmain_1_1_main_window_a1a7ef29e7427ad606b2aacd8e1993e66}{\index{main\-::\-Main\-Window@{main\-::\-Main\-Window}!R2@{R2}}
+\index{R2@{R2}!main::MainWindow@{main\-::\-Main\-Window}}
+\paragraph[{R2}]{\setlength{\rightskip}{0pt plus 5cm}main.\-Main\-Window.\-R2}}\label{classmain_1_1_main_window_a1a7ef29e7427ad606b2aacd8e1993e66}
+
+
+Buffer for Euler angles in Z axis (Roll) 
+
+Angles in degrees. Obtained from the sensor fusion algorithm (9\-D\-O\-F) developed by Sebastian Madgwick and implemented by Fabio Varesano. \hypertarget{classmain_1_1_main_window_ac830383d366fc669473cc4d94ab64efb}{\index{main\-::\-Main\-Window@{main\-::\-Main\-Window}!timer@{timer}}
+\index{timer@{timer}!main::MainWindow@{main\-::\-Main\-Window}}
+\paragraph[{timer}]{\setlength{\rightskip}{0pt plus 5cm}main.\-Main\-Window.\-timer}}\label{classmain_1_1_main_window_ac830383d366fc669473cc4d94ab64efb}
+
+
+Reference update plot timer. 
+
+Qt4 timer to trigger the  function \hypertarget{classmain_1_1_main_window_a7b804cc35c413c631e3bb870bc123232}{\index{main\-::\-Main\-Window@{main\-::\-Main\-Window}!Y@{Y}}
+\index{Y@{Y}!main::MainWindow@{main\-::\-Main\-Window}}
+\paragraph[{Y}]{\setlength{\rightskip}{0pt plus 5cm}main.\-Main\-Window.\-Y}}\label{classmain_1_1_main_window_a7b804cc35c413c631e3bb870bc123232}
+
+
+Buffer for Euler angles in X axis (Yaw) 
+
+Angles in degrees. Obtained directicly from the D\-M\-P of the M\-P\-U-\/9150 internal sensor fusion with 6\-D\-O\-F (Accelerometer + Gyroscope). \hypertarget{classmain_1_1_main_window_a7a3bc2d61217962905847f0badb89385}{\index{main\-::\-Main\-Window@{main\-::\-Main\-Window}!Y2@{Y2}}
+\index{Y2@{Y2}!main::MainWindow@{main\-::\-Main\-Window}}
+\paragraph[{Y2}]{\setlength{\rightskip}{0pt plus 5cm}main.\-Main\-Window.\-Y2}}\label{classmain_1_1_main_window_a7a3bc2d61217962905847f0badb89385}
+
+
+Buffer for Euler angles in X axis (Yaw) 
+
+Angles in degrees. Obtained from the sensor fusion algorithm (9\-D\-O\-F) developed by Sebastian Madgwick and implemented by Fabio Varesano. 
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+I\-M\-U\-Graph/main.\-py\end{DoxyCompactItemize}

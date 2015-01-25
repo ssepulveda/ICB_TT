@@ -1,0 +1,256 @@
+\hypertarget{classserver_1_1_imu}{\subsection{server.\-Imu Class Reference}
+\label{classserver_1_1_imu}\index{server.\-Imu@{server.\-Imu}}
+}
+
+
+I\-M\-U class to access data.  
+
+
+
+
+Inheritance diagram for server.\-Imu\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{classserver_1_1_imu__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for server.\-Imu\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{classserver_1_1_imu__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classserver_1_1_imu_af62e172c10fa382486a07c094adeaade}{on\-Join}
+\begin{DoxyCompactList}\small\item\em on\-Join event (server connected) \end{DoxyCompactList}\item 
+def \hyperlink{classserver_1_1_imu_a686e73f3cefe0b4a88623c68c3c49b2b}{on\-Leave}
+\begin{DoxyCompactList}\small\item\em on\-Leave event (server disconnected) \end{DoxyCompactList}\item 
+def \hyperlink{classserver_1_1_imu_a4bfc4c8632b7769ca36a773c0b39df92}{test}
+\begin{DoxyCompactList}\small\item\em test function \end{DoxyCompactList}\item 
+def \hyperlink{classserver_1_1_imu_ae090cee2a3aee7b1d9877357610b437c}{detect\-Imu}
+\begin{DoxyCompactList}\small\item\em Detects the number of connected I\-M\-Us. \end{DoxyCompactList}\item 
+def \hyperlink{classserver_1_1_imu_af407376e859abff47424fc4c2da7ea91}{set\-File\-Name}
+\begin{DoxyCompactList}\small\item\em Sets filename for the C\-S\-V export. \end{DoxyCompactList}\item 
+def \hyperlink{classserver_1_1_imu_af7b1a72e0d05b31931b955c294f1833e}{get\-File\-Name}
+\begin{DoxyCompactList}\small\item\em Gets filename of the current C\-S\-V export. \end{DoxyCompactList}\item 
+def \hyperlink{classserver_1_1_imu_a6b47186b53a976f9f851fc3b5c86e9cd}{start\-Imu}
+\begin{DoxyCompactList}\small\item\em Starts adquisition. \end{DoxyCompactList}\item 
+def \hyperlink{classserver_1_1_imu_a5d7f85a7405e74aced2c68294dafd485}{stopt\-Imu}
+\begin{DoxyCompactList}\small\item\em Stops adquisition. \end{DoxyCompactList}\item 
+def \hyperlink{classserver_1_1_imu_a3d15181eb786a459ed006e97fcf2c7c0}{get\-Imu\-Data}
+\begin{DoxyCompactList}\small\item\em Get data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classserver_1_1_imu_af9ff83e11bf2dc2d3f2040de255ff270}{{\bfseries app}}\label{classserver_1_1_imu_af9ff83e11bf2dc2d3f2040de255ff270}
+
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+I\-M\-U class to access data. 
+
+Defines callbacks and register events for W\-A\-M\-P server 
+\begin{DoxyParams}{Parameters}
+{\em Application\-Session} & W\-A\-M\-P instance \\
+\hline
+\end{DoxyParams}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classserver_1_1_imu_ae090cee2a3aee7b1d9877357610b437c}{\index{server\-::\-Imu@{server\-::\-Imu}!detect\-Imu@{detect\-Imu}}
+\index{detect\-Imu@{detect\-Imu}!server::Imu@{server\-::\-Imu}}
+\paragraph[{detect\-Imu}]{\setlength{\rightskip}{0pt plus 5cm}def server.\-Imu.\-detect\-Imu (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{arg = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}}\label{classserver_1_1_imu_ae090cee2a3aee7b1d9877357610b437c}
+
+
+Detects the number of connected I\-M\-Us. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+{\em arg} & Expected data from the Web\-Socket \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of I\-M\-Us detected 
+\end{DoxyReturn}
+\hypertarget{classserver_1_1_imu_af7b1a72e0d05b31931b955c294f1833e}{\index{server\-::\-Imu@{server\-::\-Imu}!get\-File\-Name@{get\-File\-Name}}
+\index{get\-File\-Name@{get\-File\-Name}!server::Imu@{server\-::\-Imu}}
+\paragraph[{get\-File\-Name}]{\setlength{\rightskip}{0pt plus 5cm}def server.\-Imu.\-get\-File\-Name (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{arg = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}}\label{classserver_1_1_imu_af7b1a72e0d05b31931b955c294f1833e}
+
+
+Gets filename of the current C\-S\-V export. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+{\em arg} & Expected data from the Web\-Socket \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+file name 
+\end{DoxyReturn}
+\hypertarget{classserver_1_1_imu_a3d15181eb786a459ed006e97fcf2c7c0}{\index{server\-::\-Imu@{server\-::\-Imu}!get\-Imu\-Data@{get\-Imu\-Data}}
+\index{get\-Imu\-Data@{get\-Imu\-Data}!server::Imu@{server\-::\-Imu}}
+\paragraph[{get\-Imu\-Data}]{\setlength{\rightskip}{0pt plus 5cm}def server.\-Imu.\-get\-Imu\-Data (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{arg = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}}\label{classserver_1_1_imu_a3d15181eb786a459ed006e97fcf2c7c0}
+
+
+Get data. 
+
+Gets the current data from the current enabled sensor 
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+{\em arg} & Expected data from the Web\-Socket \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sensor data 
+\end{DoxyReturn}
+\hypertarget{classserver_1_1_imu_af62e172c10fa382486a07c094adeaade}{\index{server\-::\-Imu@{server\-::\-Imu}!on\-Join@{on\-Join}}
+\index{on\-Join@{on\-Join}!server::Imu@{server\-::\-Imu}}
+\paragraph[{on\-Join}]{\setlength{\rightskip}{0pt plus 5cm}def server.\-Imu.\-on\-Join (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{details}
+\end{DoxyParamCaption}
+)}}\label{classserver_1_1_imu_af62e172c10fa382486a07c094adeaade}
+
+
+on\-Join event (server connected) 
+
+Starts the Main\-Process when server starts, initing the communication thread with the I\-M\-U 
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+{\em details} & W\-A\-M\-P data \\
+\hline
+\end{DoxyParams}
+\hypertarget{classserver_1_1_imu_a686e73f3cefe0b4a88623c68c3c49b2b}{\index{server\-::\-Imu@{server\-::\-Imu}!on\-Leave@{on\-Leave}}
+\index{on\-Leave@{on\-Leave}!server::Imu@{server\-::\-Imu}}
+\paragraph[{on\-Leave}]{\setlength{\rightskip}{0pt plus 5cm}def server.\-Imu.\-on\-Leave (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{details}
+\end{DoxyParamCaption}
+)}}\label{classserver_1_1_imu_a686e73f3cefe0b4a88623c68c3c49b2b}
+
+
+on\-Leave event (server disconnected) 
+
+Stops the Main\-Process when server stops. 
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+{\em details} & W\-A\-M\-P data \\
+\hline
+\end{DoxyParams}
+\hypertarget{classserver_1_1_imu_af407376e859abff47424fc4c2da7ea91}{\index{server\-::\-Imu@{server\-::\-Imu}!set\-File\-Name@{set\-File\-Name}}
+\index{set\-File\-Name@{set\-File\-Name}!server::Imu@{server\-::\-Imu}}
+\paragraph[{set\-File\-Name}]{\setlength{\rightskip}{0pt plus 5cm}def server.\-Imu.\-set\-File\-Name (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{arg}
+\end{DoxyParamCaption}
+)}}\label{classserver_1_1_imu_af407376e859abff47424fc4c2da7ea91}
+
+
+Sets filename for the C\-S\-V export. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+{\em arg} & file name \\
+\hline
+\end{DoxyParams}
+\hypertarget{classserver_1_1_imu_a6b47186b53a976f9f851fc3b5c86e9cd}{\index{server\-::\-Imu@{server\-::\-Imu}!start\-Imu@{start\-Imu}}
+\index{start\-Imu@{start\-Imu}!server::Imu@{server\-::\-Imu}}
+\paragraph[{start\-Imu}]{\setlength{\rightskip}{0pt plus 5cm}def server.\-Imu.\-start\-Imu (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{arg = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}}\label{classserver_1_1_imu_a6b47186b53a976f9f851fc3b5c86e9cd}
+
+
+Starts adquisition. 
+
+Inits data adquisition from the detected I\-M\-Us in another thread 
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+{\em arg} & Expected data from the Web\-Socket \\
+\hline
+\end{DoxyParams}
+\hypertarget{classserver_1_1_imu_a5d7f85a7405e74aced2c68294dafd485}{\index{server\-::\-Imu@{server\-::\-Imu}!stopt\-Imu@{stopt\-Imu}}
+\index{stopt\-Imu@{stopt\-Imu}!server::Imu@{server\-::\-Imu}}
+\paragraph[{stopt\-Imu}]{\setlength{\rightskip}{0pt plus 5cm}def server.\-Imu.\-stopt\-Imu (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{arg = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}}\label{classserver_1_1_imu_a5d7f85a7405e74aced2c68294dafd485}
+
+
+Stops adquisition. 
+
+Stops data adquisition and the corresponding thread 
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+{\em arg} & Expected data from the Web\-Socket \\
+\hline
+\end{DoxyParams}
+\hypertarget{classserver_1_1_imu_a4bfc4c8632b7769ca36a773c0b39df92}{\index{server\-::\-Imu@{server\-::\-Imu}!test@{test}}
+\index{test@{test}!server::Imu@{server\-::\-Imu}}
+\paragraph[{test}]{\setlength{\rightskip}{0pt plus 5cm}def server.\-Imu.\-test (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{arg = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}}\label{classserver_1_1_imu_a4bfc4c8632b7769ca36a773c0b39df92}
+
+
+test function 
+
+Checks the W\-A\-M\-P and Web\-Socket working with a defined Value 
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+{\em arg} & Expected data from the Web\-Socket \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Server status 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+www/server.\-py\end{DoxyCompactItemize}

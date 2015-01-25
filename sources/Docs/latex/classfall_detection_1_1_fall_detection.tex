@@ -1,0 +1,324 @@
+\hypertarget{classfall_detection_1_1_fall_detection}{\subsection{fall\-Detection.\-Fall\-Detection Class Reference}
+\label{classfall_detection_1_1_fall_detection}\index{fall\-Detection.\-Fall\-Detection@{fall\-Detection.\-Fall\-Detection}}
+}
+
+
+Detects fall from the accelerometer data.  
+
+
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classfall_detection_1_1_fall_detection_a3bdf921ddeab54c9eb78231e64e3f8c1}{\-\_\-\-\_\-init\-\_\-\-\_\-}
+\begin{DoxyCompactList}\small\item\em Constructor for the Fall Detection algorithm. \end{DoxyCompactList}\item 
+def \hyperlink{classfall_detection_1_1_fall_detection_a47ae3cde72ec28563e117e16d9e0d962}{normal\-Vector}
+\begin{DoxyCompactList}\small\item\em Calculates de normal vector of three vectors. \end{DoxyCompactList}\item 
+def \hyperlink{classfall_detection_1_1_fall_detection_aad3c9071e7a676843cdd968fef66bb56}{search1\-L\-F\-T}
+\begin{DoxyCompactList}\small\item\em Finds the first lower value on a list. \end{DoxyCompactList}\item 
+def \hyperlink{classfall_detection_1_1_fall_detection_a15d331e7cde45376a1ed81628f4fd37b}{search2\-L\-F\-T}
+\begin{DoxyCompactList}\small\item\em Finds the first upper value on a list. \end{DoxyCompactList}\item 
+def \hyperlink{classfall_detection_1_1_fall_detection_ace430c2a9f1d9d20e5ef1794693a0895}{update\-Fall}
+\begin{DoxyCompactList}\small\item\em Updates the Fall Detection algorithm with the last data. \end{DoxyCompactList}\item 
+def \hyperlink{classfall_detection_1_1_fall_detection_a0563f1d15637964895896b45581bd267}{get\-Fall\-Status}
+\begin{DoxyCompactList}\small\item\em Getter for the fall status obtained from the last update. \end{DoxyCompactList}\item 
+def \hyperlink{classfall_detection_1_1_fall_detection_aa9bad5034e22fa59b7f54f66c9d3c042}{get\-Semi\-Fall\-Status}
+\begin{DoxyCompactList}\small\item\em Getter for the semi fall status obtained from the last update. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classfall_detection_1_1_fall_detection_a957affda8f3d78b80055b7ca0b3b3e48}{{\bfseries U\-F\-T}}\label{classfall_detection_1_1_fall_detection_a957affda8f3d78b80055b7ca0b3b3e48}
+
+\item 
+\hypertarget{classfall_detection_1_1_fall_detection_a7a7839c4cad6c984c0b4086f1633bc13}{{\bfseries L\-F\-T}}\label{classfall_detection_1_1_fall_detection_a7a7839c4cad6c984c0b4086f1633bc13}
+
+\item 
+\hypertarget{classfall_detection_1_1_fall_detection_a8211460c1e22f409e204e4dd9e5843c0}{{\bfseries fs}}\label{classfall_detection_1_1_fall_detection_a8211460c1e22f409e204e4dd9e5843c0}
+
+\item 
+\hypertarget{classfall_detection_1_1_fall_detection_a9c34ba457d991bc7d1bdafe95eb1d2d8}{{\bfseries P\-O\-S\-I\-T\-I\-O\-N}}\label{classfall_detection_1_1_fall_detection_a9c34ba457d991bc7d1bdafe95eb1d2d8}
+
+\end{DoxyCompactItemize}
+\subsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classfall_detection_1_1_fall_detection_aa99e61fc17e5b0a0e42c148be47ffdd5}{S\-I\-Z\-E} = 1024
+\begin{DoxyCompactList}\small\item\em Buffer size for S\-V. \end{DoxyCompactList}\item 
+float \hyperlink{classfall_detection_1_1_fall_detection_a34f4c16af8de8c4efaf6779c46ef5f48}{U\-F\-T} = 2.\-8
+\begin{DoxyCompactList}\small\item\em Upper force trigger. \end{DoxyCompactList}\item 
+float \hyperlink{classfall_detection_1_1_fall_detection_a32fb8ad5bc5820480e2eb450c679eeda}{L\-F\-T} = 0.\-65
+\begin{DoxyCompactList}\small\item\em Lower force trigger. \end{DoxyCompactList}\item 
+int \hyperlink{classfall_detection_1_1_fall_detection_aedf3abe0136fa5efe23df8f35228d4a6}{fs} = .\-02
+\begin{DoxyCompactList}\small\item\em Time between samples. \end{DoxyCompactList}\item 
+list \hyperlink{classfall_detection_1_1_fall_detection_a343631714c9cc3129eaa46abe5c5db82}{S\-V} = \mbox{[}0.\-0\mbox{]}
+\begin{DoxyCompactList}\small\item\em List for S\-V values. \end{DoxyCompactList}\item 
+\hypertarget{classfall_detection_1_1_fall_detection_addb95520ce608393fd378aed70293199}{list \hyperlink{classfall_detection_1_1_fall_detection_addb95520ce608393fd378aed70293199}{Y\-A\-W} = \mbox{[}.\-0\mbox{]}}\label{classfall_detection_1_1_fall_detection_addb95520ce608393fd378aed70293199}
+
+\begin{DoxyCompactList}\small\item\em List for angles monitoring posture. \end{DoxyCompactList}\item 
+\hypertarget{classfall_detection_1_1_fall_detection_aa9fba49d5c83db3cc9032ede9c7d3ff8}{list {\bfseries P\-I\-T\-C\-H} = \mbox{[}.\-0\mbox{]}}\label{classfall_detection_1_1_fall_detection_aa9fba49d5c83db3cc9032ede9c7d3ff8}
+
+\item 
+\hypertarget{classfall_detection_1_1_fall_detection_aa44f488c9296cf9c27f037ae246d1649}{list {\bfseries R\-O\-L\-L} = \mbox{[}.\-0\mbox{]}}\label{classfall_detection_1_1_fall_detection_aa44f488c9296cf9c27f037ae246d1649}
+
+\item 
+\hypertarget{classfall_detection_1_1_fall_detection_a529e246a5c2c87bdb5c6426abeeb8dfb}{int \hyperlink{classfall_detection_1_1_fall_detection_a529e246a5c2c87bdb5c6426abeeb8dfb}{P\-O\-S\-I\-T\-I\-O\-N} = 0}\label{classfall_detection_1_1_fall_detection_a529e246a5c2c87bdb5c6426abeeb8dfb}
+
+\begin{DoxyCompactList}\small\item\em Indicates for the buffers index. \end{DoxyCompactList}\item 
+\hyperlink{classfall_detection_1_1_fall_detection_afa9560adcae4144df3ba9a753c920060}{D\-R\-O\-P} = False
+\begin{DoxyCompactList}\small\item\em Indicates if a fall was detected. \end{DoxyCompactList}\item 
+\hypertarget{classfall_detection_1_1_fall_detection_a2d6eb7f362620d5992fc5d6ab4d5880b}{{\bfseries S\-E\-M\-I\-D\-R\-O\-P} = False}\label{classfall_detection_1_1_fall_detection_a2d6eb7f362620d5992fc5d6ab4d5880b}
+
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Detects fall from the accelerometer data. 
+
+Using an accelerometer calculates\-:
+\begin{DoxyItemize}
+\item Impact normalized force (S\-V) and impact ranges (U\-F\-T, L\-F\-T)
+\item Detectes a range of time during the detected impact (tm, ti)
+\item Determinates the speed of the fall during the fallind time (V0)
+\item Detect the posture (change in orientation) respect the initial impact posture. With all these data and determinations is possible to estimate with presition a fall and impact.
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Author}
+Dr. Pablo Reyes 
+
+Sebastian Sepulveda 
+\end{DoxyAuthor}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000003}{Todo}]Validate algorithms \end{DoxyRefDesc}
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classfall_detection_1_1_fall_detection_a3bdf921ddeab54c9eb78231e64e3f8c1}{\index{fall\-Detection\-::\-Fall\-Detection@{fall\-Detection\-::\-Fall\-Detection}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!fallDetection::FallDetection@{fall\-Detection\-::\-Fall\-Detection}}
+\paragraph[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def fall\-Detection.\-Fall\-Detection.\-\_\-\-\_\-init\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{fs = {\ttfamily .02}, }
+\item[{}]{U\-F\-T = {\ttfamily 2.8}, }
+\item[{}]{L\-F\-T = {\ttfamily .65}}
+\end{DoxyParamCaption}
+)}}\label{classfall_detection_1_1_fall_detection_a3bdf921ddeab54c9eb78231e64e3f8c1}
+
+
+Constructor for the Fall Detection algorithm. 
+
+Initializes the values of fs, U\-F\-T and L\-F\-T allowing to change the default values of the algorithms 
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer \\
+\hline
+{\em fs} & Time between samples, in seconds \\
+\hline
+{\em U\-F\-T} & U\-F\-T trigger, in g (gravities) \\
+\hline
+{\em L\-F\-T} & L\-F\-T trigger, in g (gravities) \\
+\hline
+\end{DoxyParams}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classfall_detection_1_1_fall_detection_a0563f1d15637964895896b45581bd267}{\index{fall\-Detection\-::\-Fall\-Detection@{fall\-Detection\-::\-Fall\-Detection}!get\-Fall\-Status@{get\-Fall\-Status}}
+\index{get\-Fall\-Status@{get\-Fall\-Status}!fallDetection::FallDetection@{fall\-Detection\-::\-Fall\-Detection}}
+\paragraph[{get\-Fall\-Status}]{\setlength{\rightskip}{0pt plus 5cm}def fall\-Detection.\-Fall\-Detection.\-get\-Fall\-Status (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classfall_detection_1_1_fall_detection_a0563f1d15637964895896b45581bd267}
+
+
+Getter for the fall status obtained from the last update. 
+
+Return the result of the Fall Detection algorithm from the last \hyperlink{classfall_detection_1_1_fall_detection_ace430c2a9f1d9d20e5ef1794693a0895}{update\-Fall} call. \begin{DoxyReturn}{Returns}
+Status of the fall
+\begin{DoxyItemize}
+\item {\bfseries T\-R\-U\-E} \-: if a fall was detected
+\item {\bfseries F\-A\-L\-S\-E} \-: if a fall wasn't detected 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\hypertarget{classfall_detection_1_1_fall_detection_aa9bad5034e22fa59b7f54f66c9d3c042}{\index{fall\-Detection\-::\-Fall\-Detection@{fall\-Detection\-::\-Fall\-Detection}!get\-Semi\-Fall\-Status@{get\-Semi\-Fall\-Status}}
+\index{get\-Semi\-Fall\-Status@{get\-Semi\-Fall\-Status}!fallDetection::FallDetection@{fall\-Detection\-::\-Fall\-Detection}}
+\paragraph[{get\-Semi\-Fall\-Status}]{\setlength{\rightskip}{0pt plus 5cm}def fall\-Detection.\-Fall\-Detection.\-get\-Semi\-Fall\-Status (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classfall_detection_1_1_fall_detection_aa9bad5034e22fa59b7f54f66c9d3c042}
+
+
+Getter for the semi fall status obtained from the last update. 
+
+Return the result of the Fall Detection algorithm from the last \hyperlink{classfall_detection_1_1_fall_detection_ace430c2a9f1d9d20e5ef1794693a0895}{update\-Fall} call before checking the posture \begin{DoxyReturn}{Returns}
+Status of the semi fall
+\begin{DoxyItemize}
+\item {\bfseries T\-R\-U\-E} \-: if a semi fall was detected
+\item {\bfseries F\-A\-L\-S\-E} \-: if a semi fall wasn't detected 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\hypertarget{classfall_detection_1_1_fall_detection_a47ae3cde72ec28563e117e16d9e0d962}{\index{fall\-Detection\-::\-Fall\-Detection@{fall\-Detection\-::\-Fall\-Detection}!normal\-Vector@{normal\-Vector}}
+\index{normal\-Vector@{normal\-Vector}!fallDetection::FallDetection@{fall\-Detection\-::\-Fall\-Detection}}
+\paragraph[{normal\-Vector}]{\setlength{\rightskip}{0pt plus 5cm}def fall\-Detection.\-Fall\-Detection.\-normal\-Vector (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{x, }
+\item[{}]{y, }
+\item[{}]{z}
+\end{DoxyParamCaption}
+)}}\label{classfall_detection_1_1_fall_detection_a47ae3cde72ec28563e117e16d9e0d962}
+
+
+Calculates de normal vector of three vectors. 
+
+Uses the math library from Python 
+\begin{DoxyParams}{Parameters}
+{\em self} & The objetc pointer \\
+\hline
+{\em x} & 1st value to normalize \\
+\hline
+{\em y} & 2nd value to normalize \\
+\hline
+{\em z} & 3rd value to normalize \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Normalized value of x,y and z 
+\end{DoxyReturn}
+\hypertarget{classfall_detection_1_1_fall_detection_aad3c9071e7a676843cdd968fef66bb56}{\index{fall\-Detection\-::\-Fall\-Detection@{fall\-Detection\-::\-Fall\-Detection}!search1\-L\-F\-T@{search1\-L\-F\-T}}
+\index{search1\-L\-F\-T@{search1\-L\-F\-T}!fallDetection::FallDetection@{fall\-Detection\-::\-Fall\-Detection}}
+\paragraph[{search1\-L\-F\-T}]{\setlength{\rightskip}{0pt plus 5cm}def fall\-Detection.\-Fall\-Detection.\-search1\-L\-F\-T (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{value, }
+\item[{}]{vector}
+\end{DoxyParamCaption}
+)}}\label{classfall_detection_1_1_fall_detection_aad3c9071e7a676843cdd968fef66bb56}
+
+
+Finds the first lower value on a list. 
+
+Finds the first lower value of L\-F\-T on a list 
+\begin{DoxyParams}{Parameters}
+{\em self} & The objetc pointer \\
+\hline
+{\em value} & The value to find in the list \\
+\hline
+{\em vector} & The list to find on \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The index where the value (or 1st lower) was found 
+\end{DoxyReturn}
+\hypertarget{classfall_detection_1_1_fall_detection_a15d331e7cde45376a1ed81628f4fd37b}{\index{fall\-Detection\-::\-Fall\-Detection@{fall\-Detection\-::\-Fall\-Detection}!search2\-L\-F\-T@{search2\-L\-F\-T}}
+\index{search2\-L\-F\-T@{search2\-L\-F\-T}!fallDetection::FallDetection@{fall\-Detection\-::\-Fall\-Detection}}
+\paragraph[{search2\-L\-F\-T}]{\setlength{\rightskip}{0pt plus 5cm}def fall\-Detection.\-Fall\-Detection.\-search2\-L\-F\-T (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{value, }
+\item[{}]{vector}
+\end{DoxyParamCaption}
+)}}\label{classfall_detection_1_1_fall_detection_a15d331e7cde45376a1ed81628f4fd37b}
+
+
+Finds the first upper value on a list. 
+
+Finds the first upper value of L\-F\-T on a list 
+\begin{DoxyParams}{Parameters}
+{\em self} & The objetc pointer \\
+\hline
+{\em value} & The value to find in the list \\
+\hline
+{\em vector} & The list to find on \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The index where the value (or 1st upper) was found 
+\end{DoxyReturn}
+\hypertarget{classfall_detection_1_1_fall_detection_ace430c2a9f1d9d20e5ef1794693a0895}{\index{fall\-Detection\-::\-Fall\-Detection@{fall\-Detection\-::\-Fall\-Detection}!update\-Fall@{update\-Fall}}
+\index{update\-Fall@{update\-Fall}!fallDetection::FallDetection@{fall\-Detection\-::\-Fall\-Detection}}
+\paragraph[{update\-Fall}]{\setlength{\rightskip}{0pt plus 5cm}def fall\-Detection.\-Fall\-Detection.\-update\-Fall (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{x, }
+\item[{}]{y, }
+\item[{}]{z, }
+\item[{}]{yaw, }
+\item[{}]{pitch, }
+\item[{}]{roll}
+\end{DoxyParamCaption}
+)}}\label{classfall_detection_1_1_fall_detection_ace430c2a9f1d9d20e5ef1794693a0895}
+
+
+Updates the Fall Detection algorithm with the last data. 
+
+The function searches for a S\-V in between the impact range, a fall speed between the time corresponding the impact and the posture when a fall is detected.
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The objetc pointer \\
+\hline
+{\em x} & acceleration in X axis, in g (gravities) \\
+\hline
+{\em y} & acceleration in Y axis, in g (gravities) \\
+\hline
+{\em z} & acceleration in Z axis, in g (gravities)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The algorithm proposed sugest to filter the adquired data with a lowpass 1st order butterworth at 100 Hz. The data adquired from the M\-P\-U-\/9150 (or even A\-D\-X\-L-\/345) digital accelerometers can (and is) configured to filter the data and outputs filtered raw data. Therefore, this filter is not implemented. 
+
+The algorithm has been implemented asumming a sensor fusion running continusly for obtaining yaw, pitch, roll. The class stores the data in a buffer for look back at the posture. 
+\end{DoxyNote}
+
+
+\subsubsection{Member Data Documentation}
+\hypertarget{classfall_detection_1_1_fall_detection_afa9560adcae4144df3ba9a753c920060}{\index{fall\-Detection\-::\-Fall\-Detection@{fall\-Detection\-::\-Fall\-Detection}!D\-R\-O\-P@{D\-R\-O\-P}}
+\index{D\-R\-O\-P@{D\-R\-O\-P}!fallDetection::FallDetection@{fall\-Detection\-::\-Fall\-Detection}}
+\paragraph[{D\-R\-O\-P}]{\setlength{\rightskip}{0pt plus 5cm}fall\-Detection.\-Fall\-Detection.\-D\-R\-O\-P = False\hspace{0.3cm}{\ttfamily [static]}}}\label{classfall_detection_1_1_fall_detection_afa9560adcae4144df3ba9a753c920060}
+
+
+Indicates if a fall was detected. 
+
+
+\begin{DoxyItemize}
+\item if {\bfseries T\-R\-U\-E\-:} a fall was detected
+\item if {\bfseries F\-A\-L\-L\-:} a fall wasn't detected 
+\end{DoxyItemize}\hypertarget{classfall_detection_1_1_fall_detection_aedf3abe0136fa5efe23df8f35228d4a6}{\index{fall\-Detection\-::\-Fall\-Detection@{fall\-Detection\-::\-Fall\-Detection}!fs@{fs}}
+\index{fs@{fs}!fallDetection::FallDetection@{fall\-Detection\-::\-Fall\-Detection}}
+\paragraph[{fs}]{\setlength{\rightskip}{0pt plus 5cm}int fall\-Detection.\-Fall\-Detection.\-fs = .\-02\hspace{0.3cm}{\ttfamily [static]}}}\label{classfall_detection_1_1_fall_detection_aedf3abe0136fa5efe23df8f35228d4a6}
+
+
+Time between samples. 
+
+Time between samples, in seconds \hypertarget{classfall_detection_1_1_fall_detection_a32fb8ad5bc5820480e2eb450c679eeda}{\index{fall\-Detection\-::\-Fall\-Detection@{fall\-Detection\-::\-Fall\-Detection}!L\-F\-T@{L\-F\-T}}
+\index{L\-F\-T@{L\-F\-T}!fallDetection::FallDetection@{fall\-Detection\-::\-Fall\-Detection}}
+\paragraph[{L\-F\-T}]{\setlength{\rightskip}{0pt plus 5cm}float fall\-Detection.\-Fall\-Detection.\-L\-F\-T = 0.\-65\hspace{0.3cm}{\ttfamily [static]}}}\label{classfall_detection_1_1_fall_detection_a32fb8ad5bc5820480e2eb450c679eeda}
+
+
+Lower force trigger. 
+
+Lower force trigger for detecting the start of the impact, in g (gravities) \hypertarget{classfall_detection_1_1_fall_detection_aa99e61fc17e5b0a0e42c148be47ffdd5}{\index{fall\-Detection\-::\-Fall\-Detection@{fall\-Detection\-::\-Fall\-Detection}!S\-I\-Z\-E@{S\-I\-Z\-E}}
+\index{S\-I\-Z\-E@{S\-I\-Z\-E}!fallDetection::FallDetection@{fall\-Detection\-::\-Fall\-Detection}}
+\paragraph[{S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}int fall\-Detection.\-Fall\-Detection.\-S\-I\-Z\-E = 1024\hspace{0.3cm}{\ttfamily [static]}}}\label{classfall_detection_1_1_fall_detection_aa99e61fc17e5b0a0e42c148be47ffdd5}
+
+
+Buffer size for S\-V. 
+
+Determinate the buffer size for storing the S\-V data \hypertarget{classfall_detection_1_1_fall_detection_a343631714c9cc3129eaa46abe5c5db82}{\index{fall\-Detection\-::\-Fall\-Detection@{fall\-Detection\-::\-Fall\-Detection}!S\-V@{S\-V}}
+\index{S\-V@{S\-V}!fallDetection::FallDetection@{fall\-Detection\-::\-Fall\-Detection}}
+\paragraph[{S\-V}]{\setlength{\rightskip}{0pt plus 5cm}list fall\-Detection.\-Fall\-Detection.\-S\-V = \mbox{[}0.\-0\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}}\label{classfall_detection_1_1_fall_detection_a343631714c9cc3129eaa46abe5c5db82}
+
+
+List for S\-V values. 
+
+Stores the last S\-V values \hypertarget{classfall_detection_1_1_fall_detection_a34f4c16af8de8c4efaf6779c46ef5f48}{\index{fall\-Detection\-::\-Fall\-Detection@{fall\-Detection\-::\-Fall\-Detection}!U\-F\-T@{U\-F\-T}}
+\index{U\-F\-T@{U\-F\-T}!fallDetection::FallDetection@{fall\-Detection\-::\-Fall\-Detection}}
+\paragraph[{U\-F\-T}]{\setlength{\rightskip}{0pt plus 5cm}float fall\-Detection.\-Fall\-Detection.\-U\-F\-T = 2.\-8\hspace{0.3cm}{\ttfamily [static]}}}\label{classfall_detection_1_1_fall_detection_a34f4c16af8de8c4efaf6779c46ef5f48}
+
+
+Upper force trigger. 
+
+Upper force trigger for detecting an impact, in g (gravities) 
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+I\-M\-U\-Graph/fall\-Detection.\-py\end{DoxyCompactItemize}

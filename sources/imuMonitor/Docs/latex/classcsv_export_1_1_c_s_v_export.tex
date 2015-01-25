@@ -1,0 +1,89 @@
+\hypertarget{classcsv_export_1_1_c_s_v_export}{\subsection{csv\-Export.\-C\-S\-V\-Export Class Reference}
+\label{classcsv_export_1_1_c_s_v_export}\index{csv\-Export.\-C\-S\-V\-Export@{csv\-Export.\-C\-S\-V\-Export}}
+}
+
+
+Export data in C\-S\-V format.  
+
+
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classcsv_export_1_1_c_s_v_export_ac878a5b6f1169cc205547656c00e64d5}{\-\_\-\-\_\-init\-\_\-\-\_\-}
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{classcsv_export_1_1_c_s_v_export_a605059a6afb9a35e9ebbc80ae632d015}{def {\bfseries create\-File}}\label{classcsv_export_1_1_c_s_v_export_a605059a6afb9a35e9ebbc80ae632d015}
+
+\item 
+\hypertarget{classcsv_export_1_1_c_s_v_export_a56b678cc6a9b35df8ff37457d35d54b5}{def {\bfseries set\-Title}}\label{classcsv_export_1_1_c_s_v_export_a56b678cc6a9b35df8ff37457d35d54b5}
+
+\item 
+\hypertarget{classcsv_export_1_1_c_s_v_export_a143befa997663d79b5e748682dceaa89}{def {\bfseries get\-Title}}\label{classcsv_export_1_1_c_s_v_export_a143befa997663d79b5e748682dceaa89}
+
+\item 
+def \hyperlink{classcsv_export_1_1_c_s_v_export_a5b5e890619df75ddc137184f59036d09}{csv\-Write}
+\begin{DoxyCompactList}\small\item\em Writes a new line of data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcsv_export_1_1_c_s_v_export_a47426fc9f59aa78fa2ca721d71a5deec}{{\bfseries name}}\label{classcsv_export_1_1_c_s_v_export_a47426fc9f59aa78fa2ca721d71a5deec}
+
+\item 
+\hypertarget{classcsv_export_1_1_c_s_v_export_ae6d8f4d693e9421b2e317def0815719e}{{\bfseries C\-S\-V}}\label{classcsv_export_1_1_c_s_v_export_ae6d8f4d693e9421b2e317def0815719e}
+
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Export data in C\-S\-V format. 
+
+Export data using date and time as name for the file, avoiding overwriting data in differents adquisitions.
+
+It also registers in the first colummn the elapsed since the first adquisition
+
+\begin{DoxyNote}{Note}
+The data is stored in a \char`\"{}data\char`\"{} folder (must be created first) 
+\end{DoxyNote}
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classcsv_export_1_1_c_s_v_export_ac878a5b6f1169cc205547656c00e64d5}{\index{csv\-Export\-::\-C\-S\-V\-Export@{csv\-Export\-::\-C\-S\-V\-Export}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!csvExport::CSVExport@{csv\-Export\-::\-C\-S\-V\-Export}}
+\paragraph[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def csv\-Export.\-C\-S\-V\-Export.\-\_\-\-\_\-init\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classcsv_export_1_1_c_s_v_export_ac878a5b6f1169cc205547656c00e64d5}
+
+
+Constructor. 
+
+Gets time to create the filename and instanciate the start of the adquisition \begin{DoxyNote}{Note}
+The filename format is Year-\/\-Moth-\/\-Day\-\_\-\-Hours-\/minutes-\/seconds.\-csv 
+\end{DoxyNote}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classcsv_export_1_1_c_s_v_export_a5b5e890619df75ddc137184f59036d09}{\index{csv\-Export\-::\-C\-S\-V\-Export@{csv\-Export\-::\-C\-S\-V\-Export}!csv\-Write@{csv\-Write}}
+\index{csv\-Write@{csv\-Write}!csvExport::CSVExport@{csv\-Export\-::\-C\-S\-V\-Export}}
+\paragraph[{csv\-Write}]{\setlength{\rightskip}{0pt plus 5cm}def csv\-Export.\-C\-S\-V\-Export.\-csv\-Write (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{txt}
+\end{DoxyParamCaption}
+)}}\label{classcsv_export_1_1_c_s_v_export_a5b5e890619df75ddc137184f59036d09}
+
+
+Writes a new line of data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer \\
+\hline
+{\em txt} & The data to export \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+www/csv\-Export.\-py\end{DoxyCompactItemize}
